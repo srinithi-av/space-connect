@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-container": "#ff898d",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f7f2f4",
+          "secondary": "#9e3f47",
+          "on-secondary-fixed": "#40000b",
+          "tertiary-fixed-dim": "#ffb3b4",
+          "primary-container": "#7a1c28",
+          "secondary-fixed-dim": "#ffb3b5",
+          "on-tertiary-fixed-variant": "#8e1026",
+          "on-error-container": "#93000a",
+          "surface-dim": "#ddd9db",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface-container": "#f1edef",
+          "on-surface-variant": "#564242",
+          "on-secondary-container": "#75202a",
+          "tertiary": "#5c0012",
+          "outline": "#897171",
+          "surface-container-highest": "#e6e1e3",
+          "on-primary-container": "#ff898f",
+          "primary-fixed": "#ffdada",
+          "on-secondary-fixed-variant": "#7f2831",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#ffdad9",
+          "on-surface": "#1c1b1d",
+          "secondary-fixed": "#ffdada",
+          "surface-variant": "#e6e1e3",
+          "on-tertiary-fixed": "#40000a",
+          "on-background": "#1c1b1d",
+          "on-primary": "#ffffff",
+          "primary": "#5b0214",
+          "maroon": "#7a1c28",
+          "maroon-dark": "#5b0214",
+          "maroon-accent": "#9b1c2e",
+          "on-primary-fixed": "#40000b",
+          "inverse-on-surface": "#f4eff1",
+          "surface-bright": "#fdf8fa",
+          "outline-variant": "#dcc0c0",
+          "surface": "#fdf8fa",
+          "primary-fixed-dim": "#ffb3b4",
+          "secondary-container": "#fd898f",
+          "tertiary-container": "#840520",
+          "surface-tint": "#a33b44",
+          "inverse-surface": "#313032",
+          "surface-container-high": "#ece7e9",
+          "on-secondary": "#ffffff",
+          "background": "#fdf8fa",
+          "inverse-primary": "#ffb3b4",
+          "on-primary-fixed-variant": "#83232e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "3rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "caption": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+          "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "title-md": ["18px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }],
+          "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }],
+          "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+          "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }],
+          "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+          "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+          "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600" }],
+          "caption": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "500" }],
+          "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.025em", fontWeight: "700" }],
+          "headline-xl-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/80"><div class="h-20 max-w-[1360px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="SpaceConnect Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN-wv6r4A_S2cT1YOMeq24MJPfBa6xJ2FTFWtWe4LlUY4KFNV4UF7UX7cxDOym0c6lgmQv7R0CyZA5FD8i8Bi6yIzypkmE-Qhx91y3gVuc3gpkYCegOMVXaD2oGEUsWcJA06XwCB4q4qxpxAVx6EVUI3gStXJMJwgk7vKAPHO0ntn_WJkP9fwMhCoctEscUiNHevp7-DohiTLf2Z3lYYXr0UsoIXCx0OO3MPmp5yUgu6eJtDboBut1Cg"/><a class="font-headline-md text-headline-md font-bold tracking-tight text-primary-container" data-path="explore-spaces" href="#">SpaceConnect</a></div><div class="hidden xl:flex items-center bg-surface-container-lowest border border-outline-variant/60 rounded-full py-1.5 pl-space-md pr-1.5 shadow-[0_2px_12px_rgba(122,28,40,0.06)] hover:border-outline transition-all duration-200"><button class="px-space-sm text-left" type="button"><span class="block text-[10px] uppercase text-on-surface-variant font-bold tracking-wider">Location</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Anywhere</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block text-[10px] uppercase text-on-surface-variant font-bold tracking-wider">Event</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Any Type</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block text-[10px] uppercase text-on-surface-variant font-bold tracking-wider">Date &amp; Guests</span><span class="block font-label-md text-label-md text-outline font-normal truncate max-w-[110px]">Add details</span></button><button class="flex items-center justify-center w-9 h-9 rounded-full bg-primary-container text-on-primary hover:bg-maroon-accent transition-colors ml-1 shadow-sm" type="button"><span class="material-symbols-outlined text-base">search</span></button></div><div class="flex items-center gap-space-md flex-shrink-0"><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-lg"><a aria-current="page" class="px-space-sm py-2 transition-colors bg-surface-container-high text-on-surface font-bold rounded-lg" data-path="explore-spaces" href="#">Explore Spaces</a><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="featured-venues" href="#">Featured Venues</a><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="how-it-works" href="#">How it Works</a></nav><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2.5 rounded-full font-label-lg text-label-lg text-on-primary bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-maroon-accent transition-all shadow-[0_2px_8px_rgba(122,28,40,0.25)]" data-path="host-a-space" href="#">Host a Space</a><button aria-label="Notifications" class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><button aria-label="User menu" class="flex items-center p-0.5 rounded-full ring-2 ring-outline-variant/50 hover:ring-primary-container transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqORCOCah3dzTp560HXM1_zi7MPlmmHccINxNoj_z086QMluVrwmtKaJNzs0mzU0sl203zN2WqaIb4Qtc9BANyLpKmjm1Kom_mIzDIIvfDa7CXM0brPB2jKpWVEfa70peyqpyb8wlUsh8dhef0bO3yNdNFIC1KgyfL-e_tsbGBDi4pFrQ8teYySK7lOmJ8UIfp30bDeIdeZsKEMypVQwVbujUV_QTVxi4vYHftxt4PAJ4n5xLXb19uaw"/></button></div></div><div class="w-full border-t border-surface-container-high/60 bg-surface-container-lowest/70 backdrop-blur-md"><div class="max-w-[1360px] mx-auto px-margin flex items-center gap-space-md overflow-x-auto py-2.5 scrollbar-none"><span class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary cursor-pointer whitespace-nowrap shadow-sm"><span class="material-symbols-outlined text-sm">tune</span>All Categories</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Photo Studios</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Rooftops</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Art Galleries</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Lofts</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Warehouses</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Garden Terraces</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-on-surface hover:border-outline cursor-pointer whitespace-nowrap transition-colors">Corporate Offsites</span></div></div></header><main class="w-full pt-32 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- Filter & Discovery Control Strip -->
+<section class="sticky top-20 z-30 bg-surface/90 backdrop-blur-xl shadow-sm px-margin py-3.5 transition-all duration-200">
+<div class="max-w-[1720px] mx-auto flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-3">
+<!-- Scrollable Horizontal Pill Filter Suite -->
+<div class="flex items-center gap-2 overflow-x-auto scrollbar-none py-1">
+<!-- Price Range Trigger (Active Maroon) -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap shadow-sm hover:bg-maroon-accent transition-all" id="priceFilterBtn">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+<span>$100 – $350 / hr</span>
+<span class="material-symbols-outlined text-[14px] opacity-70">close</span>
+</button>
+<!-- Guest Capacity Trigger -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold whitespace-nowrap shadow-sm hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>20 – 150 guests</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<!-- Instant Book Filter (Active Maroon Accent) -->
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold whitespace-nowrap shadow-sm hover:brightness-95 transition-all">
+<span class="material-symbols-outlined text-[16px] text-primary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>Instant Book</span>
+</button>
+<!-- Amenities Multi-Selector -->
+<div class="h-5 w-px bg-surface-container-highest mx-0.5 hidden sm:block"></div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm hover:text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[15px]">wb_sunny</span>
+<span>Natural Light</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm hover:text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[15px]">speaker</span>
+<span>Sound System</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm hover:text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[15px]">countertops</span>
+<span>Kitchen</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm hover:text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[15px]">height</span>
+<span>High Ceilings</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md whitespace-nowrap shadow-sm hover:text-on-surface hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[15px]">deck</span>
+<span>Rooftop Access</span>
+</button>
+<!-- More Filters Popover Trigger -->
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold whitespace-nowrap shadow-sm hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>All Filters (4)</span>
+</button>
+</div>
+<!-- Sorting and View Density Controls -->
+<div class="flex items-center justify-between sm:justify-end gap-3 flex-shrink-0 pt-1 xl:pt-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap">Sort by</span>
+<div class="relative inline-block text-left">
+<button class="flex items-center justify-between gap-2 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container transition-all">
+<span>Recommended</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+</div>
+<div class="h-5 w-px bg-surface-container-highest"></div>
+<!-- Mobile Map Toggle Switch -->
+<div class="lg:hidden flex items-center bg-surface-container rounded-full p-1 shadow-inner">
+<button class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold">List</button>
+<button class="px-3 py-1 rounded-full text-on-surface-variant font-label-md text-label-md font-medium">Map</button>
+</div>
+<!-- Meta counter pill -->
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface-variant font-medium">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span><strong class="text-on-surface font-semibold">48</strong> spaces in Manhattan</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Discovery Canvas: Split Grid + Map -->
+<div class="w-full max-w-[1720px] mx-auto px-margin py-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Curated Venue Listings -->
+<section aria-label="Venue Discovery Results" class="lg:col-span-7 xl:col-span-7 flex flex-col gap-6">
+<!-- Results Subheader Strip -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-surface-container-highest/60">
+<div>
+<h1 class="font-headline-sm text-headline-sm text-primary-container tracking-tight font-bold">New York, NY</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Production studios, lofts &amp; event spaces open for booking</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface text-label-md font-label-md transition-colors" title="Save Search Alert">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span class="hidden sm:inline">Save Alert</span>
+</button>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Venue Card 1: The Glasshouse Loft in Soho -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Expansive sunlit minimalist Soho loft with floor-to-ceiling iron industrial framed windows, polished concrete flooring, exposed white brick walls, designer modular furniture in indigo and muted cream, and warm afternoon light streaming in." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0_DekZ4swvIxpzTcoBopmN3azlOu7zpnAcJxYVPLlC2x-t-ubUIinHIGeEU1DHX2Gslz8vUsdFl6jfXijWBHAO5k6v7QioA-254T-9eDHwhkQ9bIvYakKy5cXP6gfqkzuM7_q-A7yE2rQ89R8nHHpOvCbiorMTKil_K9RpOCB_U1F4pKoGAOGsnrEGYHX34oTbzBiyKB7lCk8lH2Tt0E29n0UVl8DEUNZDgOiUT0HPjYQbOlLuXVsmg"/>
+<!-- Top Overlay Badges -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">verified</span>
+                  Superhost
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-maroon-accent/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+                  Instant
+                </span>
+</div>
+<!-- Wishlist Heart Button -->
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<!-- Image Pagination dots preview -->
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<!-- Card Meta -->
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">SoHo • Creative Studio</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.96</span>
+<span class="text-on-surface-variant font-normal">(84)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">The Glasshouse Loft in Soho</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 80 guests</span>
+<span>•</span>
+<span>2,400 sq ft</span>
+<span>•</span>
+<span>4th Fl Elevator</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Natural Light</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Freight Elevator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Full Kitchen</span>
+</div>
+<!-- Price & CTA Footer -->
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$175</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+<!-- Venue Card 2: Aura Industrial Studio & Atrium -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Vast industrial studio space in Brooklyn with vaulted sawtooth skylights, oxidized iron steel trusses, raw timber beams, custom studio strobe lighting rigs, and polished concrete floors set for a high fashion photo shoot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA37saxw2vKUXUIjVxbPSjhcAQditpQ_bgJEJKdmp5P4Otq-YCL5RNQ_pvWgW8ZWheFFPda0-BkqdvEjevzoVM-Vjr0uI-TYxQ4hLArN_D5PmIU8PCO6qA7rmDOMs7M0z_trWlF8RQThQkFh3N9YLqK1KNI6s70LHUNUFFT9oN1DRYU2sw_kCAg18_B6rLszDgpsEfl5VcNh3pR8RDd9rXYxQ5-swvAqUzjxJyYYT_aTqkZsTzaDMutg"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">verified</span>
+                  Superhost
+                </span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">Bushwick • Production Loft</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.98</span>
+<span class="text-on-surface-variant font-normal">(112)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">Aura Industrial Studio &amp; Atrium</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 120 guests</span>
+<span>•</span>
+<span>3,800 sq ft</span>
+<span>•</span>
+<span>Ground Floor</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Cyclorama Wall</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Drive-In Access</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Sound Proofed</span>
+</div>
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$250</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+<!-- Venue Card 3: Lumina Skyline Penthouse & Terrace -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Spectacular rooftop terrace and glass-walled penthouse overlooking the Manhattan skyline at sunset with teak lounge seating, architectural perimeter planters, subtle ambient linear LED floor lights, and cocktail bar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhdGlBfV7pUcoeoQn_cQ5-HnJ78JstBcsWKFxHlorkTWw5gI0QA1fnQ2UCoVdCE1qB3cMd6f0pYaxPmZBDKMf-N1NHiGQisIjfNzuI72-T16DZa2Q0AgANadDjSAsoGKL0QbIBb-J1m26ELkgSECGf9z9UqKvu1JEPAylBPwSMFFYwMKP6AZMAS5tRUunk78mQcuhmskrxucbSU4yw9UDbPoRRbFEgVVm7InLZyWQ8K4wuQKhy9cZndw"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="px-2.5 py-1 rounded-full bg-maroon-accent/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+                  Instant
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary-container text-[10px] uppercase tracking-wider font-bold shadow-sm">
+                  Rooftop
+                </span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">Chelsea • Rooftop &amp; Lounge</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.92</span>
+<span class="text-on-surface-variant font-normal">(63)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">Lumina Skyline Penthouse &amp; Terrace</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 75 guests</span>
+<span>•</span>
+<span>2,100 sq ft</span>
+<span>•</span>
+<span>Indoor + Outdoor</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Skyline Views</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Outdoor Bar</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Surround Audio</span>
+</div>
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$320</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+<!-- Venue Card 4: The Velvet Vault Creative Speakeasy -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Moody atmospheric speakeasy event space with emerald velvet seating, antique brass lighting fixtures, vintage parquet herringbone wooden floors, coffered dark wood ceilings, and intimate conversation alcoves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWzvhHg3ONjppmVaOUrY4PxmJjvjgBUnDuj0XZb2MntNV59Lg2hPWjeCjbpMmiNpiok5VoTQl-BkDQDLt7B2VuJIm3j35o80ym6KjBJNvWgomgVN4cFi-wUhUvzTqJU-xnZrfUHQL8_YvuSCR1CzRrxGdImGup1yKdtk1BjUt3KbG8EZ40pf0DvliGc_O5iv2CAi2D-41VOrFmls0A_x_Dl_HGInZlqGvT6TEP3bYBwMzGPHB8OrOMyQ"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">verified</span>
+                  Superhost
+                </span>
+<span class="px-2.5 py-1 rounded-full bg-maroon-accent/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+                  Instant
+                </span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">Lower East Side • Private Venue</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.99</span>
+<span class="text-on-surface-variant font-normal">(97)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">The Velvet Vault Speakeasy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 55 guests</span>
+<span>•</span>
+<span>1,600 sq ft</span>
+<span>•</span>
+<span>Full Wet Bar</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Bartender Available</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Dimmable Lighting</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Private Alley</span>
+</div>
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$195</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+<!-- Venue Card 5: Verdant Botanical Warehouse -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Soaring double-height warehouse filled with lush exotic botanical trees, hanging fern gardens, warm architectural concrete columns, timber work tables, and cinematic ambient north-facing daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcj1m8qa14KCxyKSkurCFZMdSekdgsGPRmCWoXrEKywKVmj-e0GV9Et9z08lVR5rCfNFkNtQ99RLL8-XuivkOlgI22gi27uVe7QCPEMCEqD7eruEJ7N10obnTf1LcrEfnLZPKOFt_fVAIsrQRnYNCx6q202FCDkblwhRsNMWYw8PhHxpRkDelJKrwIFOj9VJDMF50MPM2vZdk_MEZiJG8NZy1i_amTXecDjcgdqqhI93iHkhu_ifsdvQ"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed">verified</span>
+                  Superhost
+                </span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">Greenpoint • Botanical Venue</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.94</span>
+<span class="text-on-surface-variant font-normal">(51)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">Verdant Botanical Warehouse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 140 guests</span>
+<span>•</span>
+<span>4,200 sq ft</span>
+<span>•</span>
+<span>High Ceilings (22ft)</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Live Plants</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Roll-up Gate</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">A/V Projection</span>
+</div>
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$285</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+<!-- Venue Card 6: Prism High-Ceiling Art Gallery -->
+<article class="group flex flex-col bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-surface-container-highest/60">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Pristine white cube art gallery space with museum-grade track lighting, polished light maple wood floors, grand architectural entry portal, and minimalist plinths under high recessed skylights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6ybJJv5-6Ax1MjaIGRJlKPsk7WzWo14KW2LqtpA4dCJ4SYdQtHM_gyPqltUWGP0LQzovEZrut6aaPN7ZE3D1IikpXdl69HwzYOyNfHUMQiMhcpiDvux8JkP4B-8Vh-kfUM3vM0_r3ZfGAXSFnv3UcQbGWU85Z9j2ghvn-JZA8SGWC4fquXVjrMXCRw-rJf2xVqIQYlHwsIydEW9F6aprwcdyV2bIwdwwRyILQ2JnlRUXYF_NAiOLFg"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 z-10">
+<span class="px-2.5 py-1 rounded-full bg-maroon-accent/90 backdrop-blur-md text-on-primary text-[10px] uppercase tracking-wider font-bold shadow-sm">
+                  Instant
+                </span>
+</div>
+<button aria-label="Save to Wishlist" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary-container hover:text-error hover:bg-surface-container-lowest transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/40 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary/50"></span>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<div class="flex items-baseline justify-between gap-2">
+<span class="text-[11px] uppercase text-secondary font-bold tracking-wider">Tribeca • Fine Art Gallery</span>
+<div class="flex items-center gap-1 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.97</span>
+<span class="text-on-surface-variant font-normal">(42)</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary-container group-hover:text-secondary transition-colors line-clamp-1">Prism High-Ceiling Art Gallery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Up to 110 guests</span>
+<span>•</span>
+<span>2,900 sq ft</span>
+<span>•</span>
+<span>Street Level</span>
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Track Lights</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">White Cube</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px]">Display Vitrines</span>
+</div>
+<div class="pt-3 mt-1 flex items-center justify-between bg-surface-container-low -mx-5 -mb-5 px-5 py-3.5 border-t border-surface-container-highest/60">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">$210</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-all shadow-sm">
+                  View Space
+                </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination Bar -->
+<nav aria-label="Page navigation" class="mt-4 p-4 bg-surface-container-lowest rounded-2xl shadow-sm border border-surface-container-highest/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Showing <span class="font-semibold text-on-surface">1 – 6</span> of <span class="font-semibold text-on-surface">48</span> verified spaces
+          </p>
+<div class="flex items-center gap-1.5">
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">2</button>
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">3</button>
+<span class="px-1 text-on-surface-variant font-body-sm text-body-sm">...</span>
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors">8</button>
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</nav>
+<!-- Trust & Booking Protection Callout -->
+<div class="bg-surface-container-low border border-surface-container-highest/80 rounded-2xl p-5 flex items-start gap-4 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="flex flex-col gap-1">
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary-container">SpaceConnect Guarantee Included</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every booking includes $1,000,000 property protection, verified host on-site coordination, and 24/7 dedicated event support.</p>
+</div>
+</div>
+</section>
+<!-- Right Column: Sticky Interactive Styled Map Canvas -->
+<section aria-label="Interactive Map Explorer" class="hidden lg:block lg:col-span-5 xl:col-span-5 sticky top-36 h-[calc(100vh-170px)] rounded-3xl overflow-hidden shadow-xl border border-surface-container-highest/60">
+<div class="relative w-full h-full bg-surface-container-highest">
+<!-- Static Architectural Base Map Image Layer with Coordinates -->
+<div class="w-full h-full bg-cover bg-center" data-location="SoHo Manhattan New York NY" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDz14zDktFx51kuZnTdzsD2G4fAp9oGjIiFsYQLdKMFBX23k9wKdD1SWe2KjNWN1StMLvTL4ewW6TunhRRxVepiDDfRLGqY60QbBOPRAkbhIBaeOrYNPELH4OLpd2pn50-V4cek40KhZUhv7LsWosg8qdnJOiHHSPk_LgYoPOuylxTjhHq8_rnQBmtrkBLHcfmsrSBEURySAvHacTOWmb7ZVl-pzHh1eO7CdgDrec7g-rCzAQEOGsWPMg')"></div>
+<!-- Subtle Warm Tint Gradient for Maroon Aesthetic Harmonization -->
+<div class="absolute inset-0 bg-[#7a1c28]/10 mix-blend-multiply pointer-events-none"></div>
+<!-- Top Map Float: 'Search As I Move' Toggle & Area Pill -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none z-20">
+<label class="pointer-events-auto flex items-center gap-2.5 px-3.5 py-2 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-md text-on-surface font-label-md text-label-md font-semibold cursor-pointer select-none hover:bg-surface-container-lowest transition-all">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer accent-[#7a1c28]" type="checkbox"/>
+<span>Search this area</span>
+</label>
+<button class="pointer-events-auto flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary-container/95 backdrop-blur-md text-on-primary shadow-md hover:bg-maroon-accent font-label-md text-label-md font-bold transition-all">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+<span>Reset view</span>
+</button>
+</div>
+<!-- Interactive Live Map Pricing Pins (Maroon & White styling) -->
+<!-- Pin 1 (Active/Highlighted - Soho Loft - Rich Maroon) -->
+<div class="absolute top-[32%] left-[42%] z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-bold text-[15px] shadow-xl hover:scale-110 transition-transform duration-200 flex items-center gap-1 ring-4 ring-[#7a1c28]/25">
+<span class="text-xs text-primary-fixed-dim font-normal">$</span>175
+              </div>
+<div class="w-2.5 h-2.5 bg-primary-container rotate-45 -mt-1 shadow-md"></div>
+<!-- Popover Card Preview (Shown on Hover or Active) -->
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Interior preview of the Soho loft studio showing tall sash windows, hardwood floors, and daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC76jcLJUi3lDtBLkSrikgrHRN7JqTjySMCNN3eW0uuXUIRmazKNDVCHY2QP7j_oex8vVQZfpiJTlwWaOHtK4wAW52I2dBDDru2C_xna8-qiiyHSAFEBELeq0YDUAgY8MxtOmZiyq0BhuLG1k-8VU4sgYOFcq-D2BflJa4bHiTnlTDH6yAxADfcQJRtcl4aJ6WLftF4UoOY1jx1NycWxezXdSvydeqyt31AQQ3LeCpIvshLMP6b4brFvg"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.96</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">The Glasshouse Loft in Soho</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$175/hr • Up to 80 guests</p>
+</div>
+</div>
+</div>
+<!-- Pin 2 (Brooklyn Industrial Studio - Crisp White w/ Maroon Hover) -->
+<div class="absolute top-[58%] left-[70%] z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary-container font-bold text-[15px] shadow-lg hover:bg-primary-container hover:text-on-primary hover:scale-110 transition-all duration-200 flex items-center gap-1 border border-surface-container-highest">
+<span class="text-xs text-outline font-normal">$</span>250
+              </div>
+<div class="w-2.5 h-2.5 bg-surface-container-lowest rotate-45 -mt-1 shadow-md group-hover:bg-primary-container transition-colors"></div>
+<!-- Popover Card -->
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Warehouse photo studio thumbnail with industrial overhead steel trusses and photography set." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF2JFHTrFLXyjuhC_H3CrWkC9WbJcT72kIwYGJK5HUxU-53ySvTJ35BXpLxC6GAMVu3mfiC6vv7KWMVmJcfnAXLFJSbTQAEdgVqUDg1GDWBgvxWd3OA9P8RJ-SErFJmB98ELnuzPh9klQSrkIE9MlCCgmylkENE2jlzUsoyP8stYxzvn-AS242LQ2-l1A32GUtigfeFdGb9oMQq0FMXanlQIzBkBsfX2ANNYX5WSxq9TalhjpBqXEDkQ"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.98</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">Aura Industrial Studio &amp; Atrium</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$250/hr • Up to 120 guests</p>
+</div>
+</div>
+</div>
+<!-- Pin 3 (Chelsea Rooftop) -->
+<div class="absolute top-[22%] left-[30%] z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary-container font-bold text-[15px] shadow-lg hover:bg-primary-container hover:text-on-primary hover:scale-110 transition-all duration-200 flex items-center gap-1 border border-surface-container-highest">
+<span class="text-xs text-outline font-normal">$</span>320
+              </div>
+<div class="w-2.5 h-2.5 bg-surface-container-lowest rotate-45 -mt-1 shadow-md group-hover:bg-primary-container transition-colors"></div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Rooftop terrace preview with sunset lighting and open skyline view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4wMINp7tEU-K7_RgqXxwxWff4SMizvcwvjoxlCDJ-iLcLmRsVJ0e_BOJoKkiRe6Mk19Vlyj-4xFxzs6LlTr4xDpYHv_VraXk2m8MKQECTafZJhyoTXvnlYkwHc5e0fApmmj5b3ZrZeV0ucUc2a8My8_yJlgaufMhLRsyOqxb1tzHe1HNa2LExlsdy8MkxAWbu2gP2T09Bq2-D6dFRz03no3TFeYK4XBoHq2oD4MPOuqQgBdkFHMnAlw"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.92</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">Lumina Skyline Penthouse</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$320/hr • Up to 75 guests</p>
+</div>
+</div>
+</div>
+<!-- Pin 4 (Lower East Side Speakeasy) -->
+<div class="absolute top-[48%] left-[55%] z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary-container font-bold text-[15px] shadow-lg hover:bg-primary-container hover:text-on-primary hover:scale-110 transition-all duration-200 flex items-center gap-1 border border-surface-container-highest">
+<span class="text-xs text-outline font-normal">$</span>195
+              </div>
+<div class="w-2.5 h-2.5 bg-surface-container-lowest rotate-45 -mt-1 shadow-md group-hover:bg-primary-container transition-colors"></div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Speakeasy intimate lounge thumbnail with emerald green velvet booths." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-iFokp9YwT4AvUIKN77BEWhscG6cAcdasX8cXi5X-V5ItL5ki90S7FXQuHxxvhODVWx0jt1CcKB6ErSdI4jZj9rRHd07SG1KQzh0-YxecX5PvPhwIzGkzsXShQhik-Eq2dBQRBeQ0qBdrvDSlm6wPLaf-M17BUUKhJytTBRh-C04_9KAcf0449g5mto_csCNrj8yAO5iwWp5N5fA4xH-9lyts_g7NgszD_rgwmiD-eyPTyS5gd9uDSw"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.99</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">The Velvet Vault Speakeasy</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$195/hr • Up to 55 guests</p>
+</div>
+</div>
+</div>
+<!-- Pin 5 (Greenpoint Botanical) -->
+<div class="absolute top-[40%] left-[78%] z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary-container font-bold text-[15px] shadow-lg hover:bg-primary-container hover:text-on-primary hover:scale-110 transition-all duration-200 flex items-center gap-1 border border-surface-container-highest">
+<span class="text-xs text-outline font-normal">$</span>285
+              </div>
+<div class="w-2.5 h-2.5 bg-surface-container-lowest rotate-45 -mt-1 shadow-md group-hover:bg-primary-container transition-colors"></div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Plant-filled green warehouse interior thumbnail preview." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkbgPMiQHnGgVrh9vZW3pe8J1xvx4jGTxuQgptWUFptm9Geb0bpM0FNytqOGmAmMkaSnw_pSen2QoPurSgd6cJI46Zgl05VW3zIPEM7le9f53WQow6UT7KJeVO54DkV7fP_CCViR0KOpBXbZ7bLlxIr_46oOnOPEnGIqdFp5P9pSqCFtv8MZ18cFKJMTRGER2bFchdwTHt17V6hMWmoF0gVWa6Aa4_Ter27-DL7de5nrnoCATkH-1tAg"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.94</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">Verdant Botanical Warehouse</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$285/hr • Up to 140 guests</p>
+</div>
+</div>
+</div>
+<!-- Pin 6 (Tribeca Gallery) -->
+<div class="absolute top-[52%] left-[34%] z-10 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex flex-col items-center">
+<div class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-primary-container font-bold text-[15px] shadow-lg hover:bg-primary-container hover:text-on-primary hover:scale-110 transition-all duration-200 flex items-center gap-1 border border-surface-container-highest">
+<span class="text-xs text-outline font-normal">$</span>210
+              </div>
+<div class="w-2.5 h-2.5 bg-surface-container-lowest rotate-45 -mt-1 shadow-md group-hover:bg-primary-container transition-colors"></div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-64 bg-surface-container-lowest rounded-xl shadow-2xl p-2.5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-30 border border-surface-container-highest/60">
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container mb-2">
+<img class="w-full h-full object-cover" data-alt="Tribeca white cube art gallery thumbnail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCcoW-52RrE32YNZubfl9FNe3vXF-pEBnuz_KO0IEnf4ZZirXam-KlC4i1CPPX1_0sjJ0x1Q2jwLoJHRBr5csJTDqrZhpm2-yphpA92T5S2red3F0Zn3tBEjd9fB007PEptxFuB1yNRyp1nI-Vu9-J0QuA11Wy455QtlC2ws_el5ORaYKHxNk_nF1Jsso6kkx9JSysRsUzn61E_ETNnCbRM4GC3oSbOEghFADLh_XlGnRIOOTqxCwW9g"/>
+<span class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-full bg-primary-container/90 backdrop-blur-sm text-on-primary text-[10px] font-bold">★ 4.97</span>
+</div>
+<h5 class="font-label-md text-label-md font-bold text-primary-container truncate">Prism Art Gallery</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">$210/hr • Up to 110 guests</p>
+</div>
+</div>
+</div>
+<!-- Map Floating Navigation Tools (Zoom & Layer) -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2 z-20">
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-lg overflow-hidden border border-surface-container-highest/60">
+<button aria-label="Zoom In" class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<div class="h-px w-full bg-surface-container-highest"></div>
+<button aria-label="Zoom Out" class="w-10 h-10 flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+</div>
+<button aria-label="Toggle Satellite Layers" class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors border border-surface-container-highest/60">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</button>
+</div>
+<!-- Bottom Left Map Transit & Neighborhood Tag -->
+<div class="absolute bottom-6 left-6 z-20 hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-md text-on-surface border border-surface-container-highest/60">
+<span class="material-symbols-outlined text-primary-container text-[18px]">near_me</span>
+<span class="font-label-md text-label-md font-medium">Viewing Lower Manhattan &amp; North Brooklyn</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive wishlist heart toggle micro-interaction
+  document.querySelectorAll('button[aria-label="Save to Wishlist"]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isFavorited = btn.classList.contains('text-error');
+      if (isFavorited) {
+        btn.classList.remove('text-error');
+        btn.classList.add('text-primary-container');
+        icon.style.fontVariationSettings = "'FILL' 0";
+      } else {
+        btn.classList.add('text-error');
+        btn.classList.remove('text-primary-container');
+        icon.style.fontVariationSettings = "'FILL' 1";
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low border-t border-surface-container-high py-space-2xl"><div class="max-w-[1360px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="SpaceConnect Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN-wv6r4A_S2cT1YOMeq24MJPfBa6xJ2FTFWtWe4LlUY4KFNV4UF7UX7cxDOym0c6lgmQv7R0CyZA5FD8i8Bi6yIzypkmE-Qhx91y3gVuc3gpkYCegOMVXaD2oGEUsWcJA06XwCB4q4qxpxAVx6EVUI3gStXJMJwgk7vKAPHO0ntn_WJkP9fwMhCoctEscUiNHevp7-DohiTLf2Z3lYYXr0UsoIXCx0OO3MPmp5yUgu6eJtDboBut1Cg"/><span class="font-headline-sm text-headline-sm font-bold text-primary-container">SpaceConnect</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Discover and book inspiring spaces for productions, celebrations, corporate offsites, and pop-up creative experiences.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">public</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">mail</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">share</span></span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Explore</span><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-on-surface cursor-pointer transition-colors">Creative Studios</li><li class="hover:text-on-surface cursor-pointer transition-colors">Event Venues</li><li class="hover:text-on-surface cursor-pointer transition-colors">Production Spaces</li><li class="hover:text-on-surface cursor-pointer transition-colors">Meeting Rooms</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Company</span><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-on-surface cursor-pointer transition-colors">About Us</li><li class="hover:text-on-surface cursor-pointer transition-colors">Trust &amp; Safety</li><li class="hover:text-on-surface cursor-pointer transition-colors">Community Guidelines</li><li class="hover:text-on-surface cursor-pointer transition-colors">Support Center</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Stay Connected</span><p class="font-body-sm text-body-sm text-on-surface-variant">Get curated weekly venue drops and special booking privileges.</p><form class="flex flex-col gap-space-xs" onsubmit="return false;"><input class="h-10 px-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface text-body-sm placeholder:text-outline focus:border-primary-container focus:outline-none" placeholder="Enter your email" type="email"/><button class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-maroon-accent transition-colors" type="submit">Subscribe</button></form></div></div><div class="pt-space-lg border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div>© 2025 SpaceConnect Inc. All rights reserved. Crafted for premier physical spaces.</div><div class="flex items-center gap-space-lg"><span class="hover:text-on-surface cursor-pointer transition-colors">Privacy Policy</span><span class="hover:text-on-surface cursor-pointer transition-colors">Terms of Service</span><span class="hover:text-on-surface cursor-pointer transition-colors">Cookie Settings</span></div></div></div></footer></body></html>

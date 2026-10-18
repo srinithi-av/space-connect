@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-container": "#ff898d",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f7f2f4",
+          "secondary": "#9e3f47",
+          "on-secondary-fixed": "#40000b",
+          "tertiary-fixed-dim": "#ffb3b4",
+          "primary-container": "#7a1c28",
+          "secondary-fixed-dim": "#ffb3b5",
+          "on-tertiary-fixed-variant": "#8e1026",
+          "on-error-container": "#93000a",
+          "surface-dim": "#ddd9db",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface-container": "#f1edef",
+          "on-surface-variant": "#564242",
+          "on-secondary-container": "#75202a",
+          "tertiary": "#5c0012",
+          "outline": "#897171",
+          "surface-container-highest": "#e6e1e3",
+          "on-primary-container": "#ff898f",
+          "primary-fixed": "#ffdada",
+          "on-secondary-fixed-variant": "#7f2831",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#ffdad9",
+          "on-surface": "#1c1b1d",
+          "secondary-fixed": "#ffdada",
+          "surface-variant": "#e6e1e3",
+          "on-tertiary-fixed": "#40000a",
+          "on-background": "#1c1b1d",
+          "on-primary": "#ffffff",
+          "primary": "#5b0214",
+          "on-primary-fixed": "#40000b",
+          "inverse-on-surface": "#f4eff1",
+          "surface-bright": "#fdf8fa",
+          "outline-variant": "#dcc0c0",
+          "surface": "#fdf8fa",
+          "primary-fixed-dim": "#ffb3b4",
+          "secondary-container": "#fd898f",
+          "tertiary-container": "#840520",
+          "surface-tint": "#a33b44",
+          "inverse-surface": "#313032",
+          "surface-container-high": "#ece7e9",
+          "on-secondary": "#ffffff",
+          "background": "#fdf8fa",
+          "inverse-primary": "#ffb3b4",
+          "on-primary-fixed-variant": "#83232e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "3rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "caption": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["16px", {lineHeight: "26px", fontWeight: "400"}],
+          "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}],
+          "title-md": ["18px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}],
+          "headline-lg-mobile": ["26px", {lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600"}],
+          "body-md": ["14px", {lineHeight: "22px", fontWeight: "400"}],
+          "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600"}],
+          "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}],
+          "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600"}],
+          "headline-lg": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600"}],
+          "caption": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "500"}],
+          "headline-xl": ["48px", {lineHeight: "56px", letterSpacing: "-0.025em", fontWeight: "700"}],
+          "headline-xl-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-surface-container-high/80"><div class="h-20 max-w-[1360px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="SpaceConnect Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN-wv6r4A_S2cT1YOMeq24MJPfBa6xJ2FTFWtWe4LlUY4KFNV4UF7UX7cxDOym0c6lgmQv7R0CyZA5FD8i8Bi6yIzypkmE-Qhx91y3gVuc3gpkYCegOMVXaD2oGEUsWcJA06XwCB4q4qxpxAVx6EVUI3gStXJMJwgk7vKAPHO0ntn_WJkP9fwMhCoctEscUiNHevp7-DohiTLf2Z3lYYXr0UsoIXCx0OO3MPmp5yUgu6eJtDboBut1Cg"/><a class="font-headline-md text-headline-md font-bold tracking-tight text-primary" data-path="explore-spaces" href="#">SpaceConnect</a></div><div class="hidden xl:flex items-center bg-surface-container-lowest border border-outline-variant/60 rounded-full py-1.5 pl-space-md pr-1.5 shadow-[0_2px_12px_rgba(91,2,20,0.04)] hover:border-outline transition-all duration-200"><button class="px-space-sm text-left" type="button"><span class="block font-caption text-caption uppercase text-on-surface-variant font-bold">Location</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Anywhere</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block font-caption text-caption uppercase text-on-surface-variant font-bold">Event</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Any Type</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block font-caption text-caption uppercase text-on-surface-variant font-bold">Date &amp; Guests</span><span class="block font-label-md text-label-md text-outline font-normal truncate max-w-[110px]">Add details</span></button><button class="flex items-center justify-center w-9 h-9 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors ml-1 shadow-sm" type="button"><span class="material-symbols-outlined text-base">search</span></button></div><div class="flex items-center gap-space-md flex-shrink-0"><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-lg"><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="explore-spaces" href="#">Explore Spaces</a><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="featured-venues" href="#">Featured Venues</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-surface-container-high text-primary font-bold rounded-lg" data-path="how-it-works" href="#">How it Works</a></nav><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2.5 rounded-full font-label-lg text-label-lg text-on-primary bg-gradient-to-r from-primary to-primary-container hover:from-primary hover:to-secondary transition-all shadow-[0_2px_8px_rgba(91,2,20,0.25)]" data-path="host-a-space" href="#">Host a Space</a><button aria-label="Notifications" class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><button aria-label="User menu" class="flex items-center p-0.5 rounded-full ring-2 ring-outline-variant/50 hover:ring-primary transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqORCOCah3dzTp560HXM1_zi7MPlmmHccINxNoj_z086QMluVrwmtKaJNzs0mzU0sl203zN2WqaIb4Qtc9BANyLpKmjm1Kom_mIzDIIvfDa7CXM0brPB2jKpWVEfa70peyqpyb8wlUsh8dhef0bO3yNdNFIC1KgyfL-e_tsbGBDi4pFrQ8teYySK7lOmJ8UIfp30bDeIdeZsKEMypVQwVbujUV_QTVxi4vYHftxt4PAJ4n5xLXb19uaw"/></button></div></div><div class="w-full border-t border-surface-container-high/60 bg-surface-container-lowest/70 backdrop-blur-md"><div class="max-w-[1360px] mx-auto px-margin flex items-center gap-space-md overflow-x-auto py-2.5 scrollbar-none"><span class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary cursor-pointer whitespace-nowrap shadow-sm"><span class="material-symbols-outlined text-sm">tune</span>All Categories</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Photo Studios</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Rooftops</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Art Galleries</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Lofts</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Warehouses</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Garden Terraces</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-primary cursor-pointer whitespace-nowrap transition-colors">Corporate Offsites</span></div></div></header><main class="w-full pt-32 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden pb-12">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-96 bg-gradient-to-b from-primary/10 via-surface-tint/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-[1360px] mx-auto px-margin">
+<!-- Status Breadcrumb / Success Header -->
+<section class="pt-space-xl pb-space-xl flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-primary text-on-primary w-fit shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md tracking-wider uppercase font-semibold">Instant Booking Confirmed</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight mt-1">Reservation Confirmed!</h1>
+<div class="flex flex-wrap items-center gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<span>Reference ID:</span>
+<span class="font-bold text-primary bg-surface-container px-2 py-0.5 rounded text-sm tracking-wide select-all" id="refBadge">#SC-94821</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span>Created Oct 24, 2025</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-base">verified</span>
+              SpaceConnect Guarantee Active
+            </span>
+</div>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-xl bg-surface-container border border-outline-variant/60 hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-all shadow-sm" id="printBtn">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Download PDF Receipt</span>
+</button>
+<div class="relative group">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all">
+<span class="material-symbols-outlined text-lg">calendar_add_on</span>
+<span>Add to Calendar</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 mt-2 w-48 bg-surface-container-lowest rounded-xl shadow-xl py-2 hidden group-hover:flex flex-col z-30 border border-outline-variant/60">
+<a class="px-4 py-2 hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base text-secondary">event</span> Google Calendar
+              </a>
+<a class="px-4 py-2 hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base text-primary">calendar_month</span> Apple Calendar (iCal)
+              </a>
+<a class="px-4 py-2 hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-base text-secondary">mail</span> Outlook Calendar
+              </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Dual-Column Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN (7 Cols): Itinerary, Passes, Host Comms, Add-ons -->
+<div class="lg:col-span-7 flex flex-col gap-space-xl">
+<!-- Event Itinerary Master Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl from-secondary/10 via-transparent to-transparent pointer-events-none rounded-tr-2xl"></div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Event Itinerary</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Scheduled private production &amp; team showcase</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full border border-outline-variant/40">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md font-semibold text-primary" id="countdownTimer">In 14 Days, 6 Hrs</span>
+</div>
+</div>
+<!-- Schedule Highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40">
+<div class="flex flex-col">
+<span class="font-caption text-caption uppercase tracking-wider text-outline font-semibold">Date</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary mt-1">Fri, Nov 14</span>
+<span class="font-body-md text-body-md text-on-surface-variant">2025</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption uppercase tracking-wider text-outline font-semibold">Access Window</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary mt-1">08:30 AM</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Wrap by 06:30 PM (10 hrs)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption uppercase tracking-wider text-outline font-semibold">Attendees</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary mt-1">45 Guests</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Cap: 75 pax approved</span>
+</div>
+</div>
+<!-- Digital Pass & Keyless Gate -->
+<div class="p-space-lg rounded-xl bg-gradient-to-r from-[#7a1c28] via-[#681420] to-[#54101a] text-on-primary flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-md border border-primary-container">
+<div class="flex flex-col gap-1 w-full md:w-auto">
+<div class="inline-flex items-center gap-1.5 text-primary-fixed text-xs font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm">key</span>
+                  Smart Door Access PIN
+                </div>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-headline-xl text-headline-xl tracking-widest font-mono font-bold select-all bg-surface-container-lowest/15 px-3 py-1 rounded-lg">9482#</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 flex items-center justify-center transition-colors" onclick="navigator.clipboard.writeText('9482#'); alert('Keycode copied to clipboard!');" title="Copy PIN">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-primary-fixed/80 mt-1">Active 30 mins before scheduled start (08:00 AM)</p>
+</div>
+<!-- Inline QR SVG Representation -->
+<div class="bg-surface-container-lowest p-2.5 rounded-xl shadow-lg flex flex-col items-center flex-shrink-0 border border-outline-variant/40">
+<svg class="text-primary" fill="none" height="100" viewbox="0 0 100 100" width="100">
+<!-- QR Finder 1 -->
+<rect fill="currentColor" height="30" rx="3" width="30" x="5" y="5"></rect>
+<rect fill="white" height="22" rx="2" width="22" x="9" y="9"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="14" y="14"></rect>
+<!-- QR Finder 2 -->
+<rect fill="currentColor" height="30" rx="3" width="30" x="65" y="5"></rect>
+<rect fill="white" height="22" rx="2" width="22" x="69" y="9"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="74" y="14"></rect>
+<!-- QR Finder 3 -->
+<rect fill="currentColor" height="30" rx="3" width="30" x="5" y="65"></rect>
+<rect fill="white" height="22" rx="2" width="22" x="9" y="69"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="14" y="74"></rect>
+<!-- QR Data Pattern Matrix -->
+<rect fill="currentColor" height="6" width="6" x="42" y="8"></rect>
+<rect fill="currentColor" height="14" width="6" x="52" y="8"></rect>
+<rect fill="currentColor" height="6" width="6" x="42" y="20"></rect>
+<rect fill="currentColor" height="12" width="6" x="8" y="42"></rect>
+<rect fill="currentColor" height="6" width="10" x="20" y="42"></rect>
+<rect fill="currentColor" height="6" width="8" x="22" y="52"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="42" y="42"></rect>
+<rect fill="currentColor" height="6" width="8" x="65" y="42"></rect>
+<rect fill="currentColor" height="6" width="14" x="80" y="42"></rect>
+<rect fill="currentColor" height="8" width="12" x="70" y="52"></rect>
+<rect fill="currentColor" height="8" width="8" x="86" y="52"></rect>
+<rect fill="currentColor" height="12" width="8" x="42" y="65"></rect>
+<rect fill="currentColor" height="6" width="8" x="54" y="65"></rect>
+<rect fill="currentColor" height="12" width="14" x="42" y="82"></rect>
+<rect fill="currentColor" height="18" width="6" x="65" y="70"></rect>
+<rect fill="currentColor" height="6" width="18" x="75" y="68"></rect>
+<rect fill="currentColor" height="14" width="16" x="78" y="80"></rect>
+</svg>
+<span class="font-caption text-caption text-primary font-bold tracking-tight mt-1">PASS SC-948</span>
+</div>
+</div>
+<!-- Arrival & Venue Logistics -->
+<div class="flex flex-col gap-space-sm pt-2">
+<span class="font-label-lg text-label-lg font-bold text-primary">Arrival &amp; Venue Logistics</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Freight / Loading Bay</span>
+<span class="font-body-md text-body-md text-on-surface-variant">North Alley entrance via Bay 3. Freight elevator clearance 9ft 4in. Buzzer code #802.</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl mt-0.5">local_parking</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Reserved Parking</span>
+<span class="font-body-md text-body-md text-on-surface-variant">3 designated production spots included (Stalls #14, #15, #16). Street meters free after 6 PM.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Host Communication & Direct Thread Preview -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-surface-container-highest" data-alt="Close-up portrait of Elena Vance, a professional female venue curator with a warm smile, wearing an architectural slate grey tailored jacket, shot with soft daylight in a modern industrial loft studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7RUOO4NOp_PL1VqJncepCwXeIxSocFCwPnw5wUgtrA8Uyx42_ZCjyfghS18GMv7gvuN4yTdrolX8IB6ciDdfFmWq5wLldbORB_CDJ75WpXesCy3Pw_6LDeMJiKgPMlv1hRHLJPqHeOTm-ayFn6FYFFOMM3pVA4a6760Y_pOpKA1AW0Pw8HOXYWPbii-Ovy_9fFSj6a2pWCE3623ec9giwevy8rg5j-GbjM97lhdVcK6MJzwBPKVZTbg"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-600 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Elena Vance</span>
+<span class="material-symbols-outlined text-secondary text-base" title="Verified Superhost">verified</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Venue Host &amp; Director • Typically responds in 10 mins</span>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md font-semibold flex items-center gap-1.5 transition-colors border border-outline-variant/40">
+<span class="material-symbols-outlined text-base">forum</span>
+<span>Open Full Chat</span>
+</button>
+</div>
+<!-- Message bubble preview -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-caption text-caption font-bold uppercase tracking-wider text-secondary">Latest Host Note</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Today at 11:24 AM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+                “Welcome to The Glasshouse! The lighting grid has been calibrated to 4500K daylight balance for your team. The loading dock concierge is briefed with your company pass. Let me know if you need any extra staging pedestals.”
+              </p>
+</div>
+<!-- Quick Reply Box -->
+<div class="flex items-center gap-space-xs pt-1">
+<input class="flex-grow h-11 px-space-md rounded-xl bg-surface-container-low border border-outline-variant/50 text-on-surface text-body-md placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest" placeholder="Type a message or instruction for Elena..." type="text"/>
+<button class="h-11 px-space-md rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1 transition-all shadow-sm">
+<span>Send</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<!-- Add-On Services Confirmed Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Booked Add-on Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Turnkey production packages included in this reservation</p>
+</div>
+<span class="px-3 py-1 bg-surface-container border border-outline-variant/40 text-primary font-label-md text-label-md rounded-full font-semibold">2 Services Active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-1">
+<!-- Add-on 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Dedicated AV Audio Engineer</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Full-day on-site mixing console support, 4 wireless lavs, multi-cam stream link.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/40 text-body-md">
+<span class="text-on-surface-variant">Confirmed Tech: Marcus Chen</span>
+<span class="font-bold text-primary font-title-md text-title-md">$320.00</span>
+</div>
+</div>
+<!-- Add-on 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Artisan Espresso Bar &amp; Barista</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Continuous espresso service, single-origin cold brews, oat milk, artisanal teas.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/40 text-body-md">
+<span class="text-on-surface-variant">Service: 08:30 AM – 02:00 PM</span>
+<span class="font-bold text-primary font-title-md text-title-md">$240.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (5 Cols): Venue Recap, Receipt Breakdown, Security, Concierge -->
+<div class="lg:col-span-5 flex flex-col gap-space-xl">
+<!-- Venue Showcase Recap Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+<div class="relative w-full h-56">
+<img class="w-full h-full object-cover" data-alt="Wide-angle photograph of The Glasshouse Loft in Soho Manhattan featuring soaring 16-foot vaulted industrial ceilings, polished warm concrete floors, floor-to-ceiling iron casement windows streaming bright cinematic natural sunlight, and minimalist designer furniture with lush indoor plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6NUH8FmvTCu3_eSTLVxC1rgC3la3BLrUn18mLt7UoR8h4fidtf9_SGwFySDA5KfX5Cpi3yAIgn8CU7aNiykO3QAofAxt0iy29GcAWLiMRDmwtPh72KlYmmEAWf4dSJ628e4BviFXHDpFLtV8_CCZCz_uw1bI8sjFPb2-xadyMD-bz1pUqEyFHF3Io_S248e6Gcsad57j8c7ji0lQyPLLKLD-BxfID4m5G6LZdmA21uSRGE9PX7x2Ig"/>
+<div class="absolute top-3 left-3 bg-primary/85 backdrop-blur-md px-3 py-1 rounded-full text-on-primary font-caption text-caption uppercase tracking-wider font-bold">
+                Exclusive Use Venue
+              </div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary flex items-center justify-center hover:bg-surface-container-lowest transition-colors shadow">
+<span class="material-symbols-outlined text-sm">share</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-primary">The Glasshouse Loft</h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-md text-body-md mt-0.5">
+<span class="material-symbols-outlined text-amber-600 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-primary">4.98</span>
+<span>(142 verified bookings)</span>
+</div>
+</div>
+<span class="text-xs bg-surface-container px-2.5 py-1 rounded-md text-primary font-semibold border border-outline-variant/40">SoHo, NYC</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low border border-outline-variant/40 p-space-sm rounded-xl mt-1">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg">location_on</span>
+<span class="font-body-md text-body-md">524 Broadway, Floor 6, New York</span>
+</div>
+<a class="font-label-md text-label-md text-secondary font-bold hover:underline flex items-center gap-0.5 whitespace-nowrap" href="#">
+<span>Open Maps</span>
+<span class="material-symbols-outlined text-xs">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Payment Summary Receipt Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Payment Summary</h3>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-emerald-600" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                  Paid in full via Visa •••• 4242
+                </span>
+</div>
+<button class="text-secondary font-label-md text-label-md font-semibold hover:underline">
+                View Tax Invoice
+              </button>
+</div>
+<!-- Granular Itemized Breakdown -->
+<div class="flex flex-col gap-space-xs text-body-md text-on-surface-variant pt-2">
+<div class="flex items-center justify-between">
+<span>Space Rental (10 hrs @ $75/hr)</span>
+<span class="font-medium text-primary font-title-md text-sm">$750.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Sound &amp; AV Technician Package</span>
+<span class="font-medium text-primary font-title-md text-sm">$320.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Artisan Barista &amp; Coffee Service</span>
+<span class="font-medium text-primary font-title-md text-sm">$240.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Cleaning &amp; Post-Production Turnover</span>
+<span class="font-medium text-primary font-title-md text-sm">$80.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1">
+                  SpaceConnect Service &amp; Safety Fee
+                  <span class="material-symbols-outlined text-xs text-outline cursor-help" title="Covers 24/7 concierge, insurance, and verification platform services">info</span>
+</span>
+<span class="font-medium text-primary font-title-md text-sm">$25.00</span>
+</div>
+<!-- Total Divider -->
+<div class="h-px bg-outline-variant/50 my-space-xs"></div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary block">Total Paid</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Includes $112.50 NY State Sales Tax</span>
+</div>
+<div class="text-right">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">$1,415.00</span>
+<span class="font-caption text-caption uppercase block text-secondary font-bold tracking-wider">USD • CHARGED</span>
+</div>
+</div>
+</div>
+<!-- Guarantee Seal Banner -->
+<div class="bg-surface-container-low border border-outline-variant/40 p-space-sm rounded-xl flex items-center gap-space-sm mt-1">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-lg">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">$1,000,000 Host &amp; Guest Liability</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Covered under SpaceConnect SecureShield Protection.</span>
+</div>
+</div>
+</div>
+<!-- Policy & Cancellation Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-sm">
+<h4 class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">policy</span>
+              Host Cancellation &amp; Reschedule Policy
+            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong>Flexible 48-Hour Guarantee:</strong> Full 100% refund available up to 48 hours prior to start time (Nov 12, 08:30 AM). Between 48 and 24 hours, receive a 50% refund or free date transfer. Non-refundable within 24 hours of scheduled arrival.
+            </p>
+<div class="pt-2 flex items-center gap-space-sm">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline">Review Master Agreement</button>
+<span class="text-outline-variant">•</span>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary underline">Venue Rules &amp; Decibel Limits</button>
+</div>
+</div>
+<!-- 24/7 Event Concierge Help Capsule -->
+<div class="bg-gradient-to-br from-[#7a1c28] via-[#63111e] to-[#40000a] rounded-2xl p-space-lg text-on-primary shadow-md flex items-center justify-between gap-space-md border border-primary-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest/15 flex items-center justify-center text-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold block text-on-primary">24/7 Event Concierge</span>
+<span class="font-body-md text-body-md text-primary-fixed/80">Need emergency equipment, catering, or extensions?</span>
+</div>
+</div>
+<button class="px-space-md py-2.5 rounded-xl bg-primary hover:bg-[#40000a] border border-outline-variant/30 text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap shadow transition-all">
+              Call Support
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for PDF receipt download trigger
+  document.getElementById('printBtn')?.addEventListener('click', () => {
+    window.print();
+  });
+</script></main><footer class="w-full bg-surface-container-low border-t border-surface-container-high py-12"><div class="max-w-[1360px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-12"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="SpaceConnect Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN-wv6r4A_S2cT1YOMeq24MJPfBa6xJ2FTFWtWe4LlUY4KFNV4UF7UX7cxDOym0c6lgmQv7R0CyZA5FD8i8Bi6yIzypkmE-Qhx91y3gVuc3gpkYCegOMVXaD2oGEUsWcJA06XwCB4q4qxpxAVx6EVUI3gStXJMJwgk7vKAPHO0ntn_WJkP9fwMhCoctEscUiNHevp7-DohiTLf2Z3lYYXr0UsoIXCx0OO3MPmp5yUgu6eJtDboBut1Cg"/><span class="font-headline-sm text-headline-sm font-bold text-primary">SpaceConnect</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Discover and book inspiring spaces for productions, celebrations, corporate offsites, and pop-up creative experiences.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">public</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">mail</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">share</span></span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Explore</span><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">Creative Studios</li><li class="hover:text-primary cursor-pointer transition-colors">Event Venues</li><li class="hover:text-primary cursor-pointer transition-colors">Production Spaces</li><li class="hover:text-primary cursor-pointer transition-colors">Meeting Rooms</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Company</span><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">About Us</li><li class="hover:text-primary cursor-pointer transition-colors">Trust &amp; Safety</li><li class="hover:text-primary cursor-pointer transition-colors">Community Guidelines</li><li class="hover:text-primary cursor-pointer transition-colors">Support Center</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-on-surface">Stay Connected</span><p class="font-body-md text-body-md text-on-surface-variant">Get curated weekly venue drops and special booking privileges.</p><form class="flex flex-col gap-space-xs" onsubmit="return false;"><input class="h-10 px-space-sm rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface text-body-md placeholder:text-outline focus:border-primary focus:outline-none" placeholder="Enter your email" type="email"/><button class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shadow-sm" type="submit">Subscribe</button></form></div></div><div class="pt-space-lg border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-space-md font-body-md text-body-md text-on-surface-variant"><div>© 2025 SpaceConnect Inc. All rights reserved. Crafted for premier physical spaces.</div><div class="flex items-center gap-space-lg"><span class="hover:text-primary cursor-pointer transition-colors">Privacy Policy</span><span class="hover:text-primary cursor-pointer transition-colors">Terms of Service</span><span class="hover:text-primary cursor-pointer transition-colors">Cookie Settings</span></div></div></div></footer></body></html>

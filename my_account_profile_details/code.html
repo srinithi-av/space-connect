@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>My Account &amp; Profile Settings</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              50: '#FDF2F4',
+              100: '#FCE7EB',
+              200: '#F8D1D7',
+              600: '#A01B2E',
+              700: '#8B0000',
+              800: '#7A1C28',
+              900: '#5C0F1B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #F3F5F9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(122, 28, 40, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col">
+<!-- BEGIN: TopHeaderNavigation -->
+<header class="bg-white border-b border-slate-200 text-xs font-medium text-slate-600 px-6 lg:px-12 py-3.5">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+<!-- Left Category Links -->
+<nav class="flex items-center space-x-6">
+<a class="hover:text-maroon-800 transition-colors" href="#">Venues</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Stream</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Events</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Plays</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Sports</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Activities</a>
+</nav>
+<!-- Right Ancillary Links -->
+<nav class="flex items-center space-x-6 text-slate-600">
+<a class="hover:text-maroon-800 transition-colors" href="#">ListYourVenue</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Corporates</a>
+<a class="hover:text-maroon-800 transition-colors" href="#">Offers</a>
+<a class="hover:text-maroon-800 transition-colors font-semibold text-slate-800" href="#">Gift Cards</a>
+</nav>
+</div>
+</header>
+<!-- END: TopHeaderNavigation -->
+<!-- BEGIN: MainContentLayout -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- BEGIN: LeftSidebarMenu -->
+<aside class="lg:col-span-4 xl:col-span-3 bg-white rounded-2xl shadow-sm border border-slate-100 p-6" data-purpose="sidebar-navigation">
+<!-- Sidebar Header -->
+<div class="flex items-center justify-between pb-6 mb-2">
+<h2 class="text-2xl font-bold text-slate-900 tracking-tight">My Account</h2>
+<button aria-label="Close Account Menu" class="p-1 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+</button>
+</div>
+<!-- Navigation Links -->
+<nav aria-label="Account Settings Navigation" class="space-y-1.5">
+<!-- Profile (Active item) -->
+<a class="flex items-center justify-between px-3.5 py-3 rounded-xl bg-maroon-50 text-maroon-800 font-semibold transition-colors group" href="#">
+<div class="flex items-center space-x-3.5">
+<div class="w-7 h-7 rounded-full border border-maroon-600 flex items-center justify-center text-maroon-800">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user" aria-hidden="true" class="lucide lucide-user w-4 h-4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+</div>
+<span class="text-sm">Profile</span>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" aria-hidden="true" class="lucide lucide-play w-2.5 h-2.5 fill-maroon-800 text-maroon-800"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+</a>
+<!-- Your Orders -->
+<a class="flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="receipt" aria-hidden="true" class="lucide lucide-receipt w-5 h-5 text-slate-500"><path d="M12 17V7"></path><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path></svg>
+<span class="text-sm">Your Orders</span>
+</a>
+<!-- Saved Devices -->
+<a class="flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="monitor" aria-hidden="true" class="lucide lucide-monitor w-5 h-5 text-slate-500"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+<span class="text-sm">Saved Devices</span>
+</a>
+<!-- Divider -->
+<div class="py-2">
+<hr class="border-slate-200">
+</div>
+<!-- Stream Library -->
+<a class="flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="film" aria-hidden="true" class="lucide lucide-film w-5 h-5 text-slate-500"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 3v18"></path><path d="M3 7.5h4"></path><path d="M3 12h18"></path><path d="M3 16.5h4"></path><path d="M17 3v18"></path><path d="M17 7.5h4"></path><path d="M17 16.5h4"></path></svg>
+<span class="text-sm">Stream Library</span>
+</a>
+<!-- Your Wishlist -->
+<a class="flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart w-5 h-5 text-slate-500"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+<span class="text-sm">Your Wishlist</span>
+</a>
+<!-- QuikPay -->
+<a class="flex items-center space-x-3.5 px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" aria-hidden="true" class="lucide lucide-credit-card w-5 h-5 text-slate-500"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line><path d="M6 14h2"></path></svg>
+<span class="text-sm">QuikPay</span>
+</a>
+<!-- Rewards -->
+<a class="flex items-center justify-between px-3.5 py-3 rounded-xl text-slate-700 hover:bg-slate-50 hover:text-slate-900 transition-colors font-medium" href="#">
+<div class="flex items-center space-x-3.5">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="gift" aria-hidden="true" class="lucide lucide-gift w-5 h-5 text-slate-500"><path d="M12 7v14"></path><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path><path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path><rect x="3" y="7" width="18" height="4" rx="1"></rect></svg>
+<span class="text-sm">Rewards</span>
+</div>
+<span class="bg-amber-400 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-sm">8 Unopened</span>
+</a>
+<!-- Sign Out -->
+<div class="pt-6">
+<button class="flex items-center space-x-3.5 px-3.5 py-3 w-full rounded-xl text-maroon-700 hover:bg-maroon-50 transition-colors font-medium" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="log-out" aria-hidden="true" class="lucide lucide-log-out w-5 h-5 text-maroon-700"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path></svg>
+<span class="text-sm font-semibold">Sign Out</span>
+</button>
+</div>
+</nav>
+</aside>
+<!-- END: LeftSidebarMenu -->
+<!-- BEGIN: RightProfileCard -->
+<section class="lg:col-span-8 xl:col-span-9 bg-white rounded-2xl shadow-sm border border-slate-100 p-8 lg:p-12" data-purpose="profile-settings">
+<!-- User Avatar & Headline -->
+<div class="flex items-center space-x-6 pb-12">
+<!-- Circular Avatar Placeholder -->
+<div class="w-28 h-28 lg:w-32 lg:h-32 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-400 shrink-0 overflow-hidden shadow-inner">
+<svg class="w-24 h-24 text-slate-400 mt-5" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div>
+<h1 class="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">Srinithi Ayyapparaj</h1>
+</div>
+</div>
+<form action="#" class="space-y-10" method="POST" onsubmit="event.preventDefault();">
+<!-- Account Details Section -->
+<div class="space-y-4">
+<h2 class="text-xl font-bold text-slate-900">Account Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Mobile Number -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between text-sm">
+<label class="text-slate-600 font-medium" for="mobile-number">Mobile Number</label>
+<button class="text-maroon-700 hover:text-maroon-900 font-semibold flex items-center space-x-1 text-xs" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pencil" aria-hidden="true" class="lucide lucide-pencil w-3.5 h-3.5"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>
+<span class="">Edit</span>
+</button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3.5 pr-10 text-slate-700 bg-white border border-slate-300 rounded-lg text-sm select-none cursor-default focus:border-maroon-700" id="mobile-number" readonly="" type="text" value="+91 98765 43210">
+<div class="absolute right-3.5 text-emerald-600">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 stroke-[3]"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+</div>
+</div>
+<!-- Email Address -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between text-sm">
+<label class="text-slate-600 font-medium" for="email-address">Email Address</label>
+<button class="text-maroon-700 hover:text-maroon-900 font-semibold flex items-center space-x-1 text-xs" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pencil" aria-hidden="true" class="lucide lucide-pencil w-3.5 h-3.5"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>
+<span class="">Edit</span>
+</button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3.5 pr-10 text-slate-700 bg-white border border-slate-300 rounded-lg text-sm select-none cursor-default focus:border-maroon-700" id="email-address" readonly="" type="email" value="srinithi.ayyapparaj@example.com">
+<div class="absolute right-3.5 text-emerald-600">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check w-4 h-4 stroke-[3]"><path d="M20 6 9 17l-5-5"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Personal Details Section -->
+<div class="space-y-4">
+<h2 class="text-xl font-bold text-slate-900">Personal Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- First Name -->
+<div class="space-y-1.5">
+<label class="block text-sm font-medium text-slate-600" for="first-name">
+                  First Name <span class="text-maroon-700">*</span>
+</label>
+<input class="w-full h-11 px-3.5 text-slate-800 bg-white border border-slate-300 rounded-lg text-sm focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800" id="first-name" type="text" value="Srinithi">
+</div>
+<!-- Last Name -->
+<div class="space-y-1.5">
+<label class="block text-sm font-medium text-slate-600" for="last-name">
+                  Last Name <span class="text-maroon-700">*</span>
+</label>
+<input class="w-full h-11 px-3.5 text-slate-800 bg-white border border-slate-300 rounded-lg text-sm focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800" id="last-name" type="text" value="Ayyapparaj">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+<!-- Birthday (Optional) -->
+<div class="space-y-1.5">
+<label class="block text-sm font-medium text-slate-600" for="birthday">
+                  Birthday (Optional)
+                </label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3.5 text-slate-800 bg-white border border-slate-300 rounded-lg text-sm focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800" id="birthday" type="date" value="1998-05-14">
+</div>
+</div>
+<!-- Identity (Optional) -->
+<div class="space-y-1.5">
+<label class="block text-sm font-medium text-slate-600">
+                  Identity (Optional)
+                </label>
+<!-- Segmented Toggle Group -->
+<div class="flex items-center space-x-3">
+<!-- Woman Option (Selected) -->
+<button class="h-11 px-6 rounded-lg text-sm font-semibold border-2 border-maroon-600 bg-maroon-50 text-maroon-800 transition-colors" type="button">
+                    Woman
+                  </button>
+<!-- Man Option -->
+<button class="h-11 px-6 rounded-lg text-sm font-medium border border-slate-300 bg-white text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" type="button">
+                    Man
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons / Save Changes -->
+<div class="pt-6 border-t border-slate-100 flex justify-end">
+<button class="w-full sm:w-auto px-8 py-3 bg-maroon-800 hover:bg-maroon-900 text-white font-medium text-sm rounded-lg shadow-sm transition-colors" type="submit">
+              Save Changes
+            </button>
+</div>
+</form>
+</section>
+<!-- END: RightProfileCard -->
+</div>
+</main>
+<!-- END: MainContentLayout -->
+<!-- Icon Initialization Script -->
+<script data-purpose="lucide-initialization">
+    lucide.createIcons();
+  </script>
+
+
+</body></html>

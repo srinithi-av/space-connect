@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-container": "#ff898d",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#f7f2f4",
+          "secondary": "#9e3f47",
+          "on-secondary-fixed": "#40000b",
+          "tertiary-fixed-dim": "#ffb3b4",
+          "primary-container": "#7a1c28",
+          "secondary-fixed-dim": "#ffb3b5",
+          "on-tertiary-fixed-variant": "#8e1026",
+          "on-error-container": "#93000a",
+          "surface-dim": "#ddd9db",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "surface-container": "#f1edef",
+          "on-surface-variant": "#564242",
+          "on-secondary-container": "#75202a",
+          "tertiary": "#5c0012",
+          "outline": "#897171",
+          "surface-container-highest": "#e6e1e3",
+          "on-primary-container": "#ff898f",
+          "primary-fixed": "#ffdada",
+          "on-secondary-fixed-variant": "#7f2831",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#ffdad9",
+          "on-surface": "#1c1b1d",
+          "secondary-fixed": "#ffdada",
+          "surface-variant": "#e6e1e3",
+          "on-tertiary-fixed": "#40000a",
+          "on-background": "#1c1b1d",
+          "on-primary": "#ffffff",
+          "primary": "#5b0214",
+          "on-primary-fixed": "#40000b",
+          "inverse-on-surface": "#f4eff1",
+          "surface-bright": "#fdf8fa",
+          "outline-variant": "#dcc0c0",
+          "surface": "#fdf8fa",
+          "primary-fixed-dim": "#ffb3b4",
+          "secondary-container": "#fd898f",
+          "tertiary-container": "#840520",
+          "surface-tint": "#a33b44",
+          "inverse-surface": "#313032",
+          "surface-container-high": "#ece7e9",
+          "on-secondary": "#ffffff",
+          "background": "#fdf8fa",
+          "inverse-primary": "#ffb3b4",
+          "on-primary-fixed-variant": "#83232e"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "3rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "caption": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"],
+          "headline-xl-mobile": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-lg": ["16px", {lineHeight: "26px", fontWeight: "400"}],
+          "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600"}],
+          "title-md": ["18px", {lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600"}],
+          "headline-lg-mobile": ["26px", {lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600"}],
+          "body-md": ["14px", {lineHeight: "22px", fontWeight: "400"}],
+          "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600"}],
+          "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}],
+          "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600"}],
+          "headline-lg": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "600"}],
+          "caption": ["11px", {lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "500"}],
+          "headline-xl": ["48px", {lineHeight: "56px", letterSpacing: "-0.025em", fontWeight: "700"}],
+          "headline-xl-mobile": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-surface-container-high/80"><div class="h-20 max-w-[1360px] mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-shrink-0"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-xl">domain</span></div><a class="font-headline-md text-headline-md font-bold tracking-tight text-primary" data-path="explore-spaces" href="#">SpaceConnect</a></div><div class="hidden xl:flex items-center bg-surface-container-lowest border border-outline-variant/60 rounded-full py-1.5 pl-space-md pr-1.5 shadow-[0_2px_12px_rgba(91,2,20,0.06)] hover:border-secondary transition-all duration-200"><button class="px-space-sm text-left" type="button"><span class="block text-[10px] tracking-wider uppercase text-on-surface-variant font-bold">Location</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Anywhere</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block text-[10px] tracking-wider uppercase text-on-surface-variant font-bold">Event</span><span class="block font-label-md text-label-md text-on-surface font-medium truncate max-w-[110px]">Any Type</span></button><div class="h-6 w-px bg-surface-container-highest"></div><button class="px-space-sm text-left" type="button"><span class="block text-[10px] tracking-wider uppercase text-on-surface-variant font-bold">Date &amp; Guests</span><span class="block font-label-md text-label-md text-outline font-normal truncate max-w-[110px]">Add details</span></button><button class="flex items-center justify-center w-9 h-9 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors ml-1 shadow-sm" type="button"><span class="material-symbols-outlined text-base">search</span></button></div><div class="flex items-center gap-space-md flex-shrink-0"><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary rounded-lg transition-colors" data-path="explore-spaces" href="#">Explore Spaces</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-surface-container-high text-primary font-bold rounded-lg" data-path="featured-venues" href="#">Featured Venues</a><a class="px-space-sm py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary rounded-lg transition-colors" data-path="how-it-works" href="#">How it Works</a></nav><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2.5 rounded-full font-label-lg text-label-lg text-on-primary bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-secondary transition-all shadow-[0_2px_8px_rgba(122,28,40,0.3)]" data-path="host-a-space" href="#">Host a Space</a><button aria-label="Notifications" class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><button aria-label="User menu" class="flex items-center p-0.5 rounded-full ring-2 ring-outline-variant/50 hover:ring-secondary transition-all" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqORCOCah3dzTp560HXM1_zi7MPlmmHccINxNoj_z086QMluVrwmtKaJNzs0mzU0sl203zN2WqaIb4Qtc9BANyLpKmjm1Kom_mIzDIIvfDa7CXM0brPB2jKpWVEfa70peyqpyb8wlUsh8dhef0bO3yNdNFIC1KgyfL-e_tsbGBDi4pFrQ8teYySK7lOmJ8UIfp30bDeIdeZsKEMypVQwVbujUV_QTVxi4vYHftxt4PAJ4n5xLXb19uaw"/></button></div></div><div class="w-full border-t border-surface-container-high/60 bg-surface-container-lowest/70 backdrop-blur-md"><div class="max-w-[1360px] mx-auto px-margin flex items-center gap-space-md overflow-x-auto py-2.5 scrollbar-none"><span class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary cursor-pointer whitespace-nowrap shadow-sm"><span class="material-symbols-outlined text-sm">tune</span>All Categories</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Photo Studios</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Rooftops</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Art Galleries</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Lofts</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Warehouses</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Garden Terraces</span><span class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest border border-outline-variant/80 text-on-surface-variant hover:text-primary hover:border-secondary cursor-pointer whitespace-nowrap transition-colors">Corporate Offsites</span></div></div></header><main class="w-full pt-32 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- Top Navigation & Breadcrumbs -->
+<div class="max-w-[1360px] w-full mx-auto px-margin pt-6 pb-4">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Explore</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">New York, NY</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Photo &amp; Production Lofts</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold truncate">The Glasshouse Loft</span>
+</nav>
+<!-- Venue Title & Metadata Header -->
+<div class="mt-4 flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-caption text-caption uppercase tracking-wider font-bold">Premier Verified</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-caption text-caption uppercase tracking-wider font-bold">Daylight Cyclorama</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">The Glasshouse Loft &amp; Skylight Gallery</h1>
+<div class="flex items-center gap-space-sm font-label-lg text-label-lg flex-wrap text-on-surface-variant">
+<div class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.98</span>
+<span class="text-on-surface-variant font-normal">(128 reviews)</span>
+</div>
+<span>•</span>
+<span class="flex items-center gap-1 font-medium text-on-surface">
+<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+            Superhost
+          </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+            Downtown SoHo, Manhattan, NY
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-primary hover:bg-surface-container-high font-label-md text-label-md transition-colors shadow-sm border border-outline-variant/40" type="button">
+<span class="material-symbols-outlined text-base">share</span>
+          Share
+        </button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-low text-primary hover:bg-surface-container-high font-label-md text-label-md transition-colors shadow-sm border border-outline-variant/40" id="saveBtn" type="button">
+<span class="material-symbols-outlined text-base text-secondary" id="saveIcon">favorite_border</span>
+<span id="saveLabel">Save</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Immersive Bento Photo Showcase -->
+<div class="max-w-[1360px] w-full mx-auto px-margin my-4">
+<div class="relative grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 h-[460px] md:h-[540px] rounded-2xl overflow-hidden bg-surface-container">
+<!-- Main Hero 2x2 Image -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container-highest cursor-pointer">
+<img alt="Glasshouse Loft Main Great Room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Architectural wide-angle shot of a bright SoHo loft gallery with polished concrete floors, soaring 14-foot exposed beam ceilings, industrial iron-framed windows flooded with northern daylight, modern gallery track lighting, and a minimalist marble kitchen island in deep navy and warm light accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoM3zBk_LvqdHvS3Y3dH2dngxYveZk_XijtLp8ecjsdW6CwPrQgwTswGc5A-EY4DM1wOQqtBSj9_HmG-YRSvU8_0F5tGj9Bkw-4jr2Yfy9cByVZrWtSRC4zWxkw0zmC1QE3QGcAUH4jImcFEnTWC-ZH4REMDNFvhGs9zx1jcNdvIE3JnuYn6mPAY8y9u7eE5qnaJab3B9E5wfAsseo3LGCj--WJjVD02wHVLPxymGBtCBL_oeThIphpw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/75 via-primary/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+<div class="absolute bottom-4 left-4 text-on-primary">
+<span class="font-caption text-caption uppercase tracking-widest text-primary-fixed font-bold">Main Gallery</span>
+<p class="font-label-lg text-label-lg font-semibold">Great Room &amp; 14ft North-Facing Skylights</p>
+</div>
+</div>
+<!-- Photo 2: Cyclorama Stage -->
+<div class="relative group overflow-hidden bg-surface-container-highest cursor-pointer hidden md:block">
+<img alt="Seamless Cyclorama Stage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine white seamless corner cyclorama wall in an airy NYC daylight studio with Profoto strobe umbrellas and softboxes positioned neatly, warm wooden architectural details, soft afternoon ambient sunbeams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoEoHnZs7iQbeK1P6MT08uTpOeC_FvNv9lQTaBGg-N3sD_0NaVzppcBBXfGOepQiVHUQW764zkFvgzAZTy8jW5WtupBfvC8qGLKnuu1rIFawKGW_90nVmkb5s4e4vin7cATBHsiebHZ6q6BZ4MPqRCB-8XCd423JZAEtIQAtybMcJXfiKGjpYt7iH1WOrnUrZIU-MCaXU6plxZOleD_BI-pTcQyvn0B1ouKmV1uoNPykF33w55ZHyR5Q"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<!-- Photo 3: Commercial Island & Dining -->
+<div class="relative group overflow-hidden bg-surface-container-highest cursor-pointer hidden md:block">
+<img alt="Commercial Prep Bar &amp; Island" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Sophisticated custom oak and black fluted marble kitchen prep island set up for culinary events, styled with contemporary glassware, matte black fixtures, and minimal floral installations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt1R0MeLP18tEpaMTSIICuG_mbUA5h9by_ZJ_DrYrGy20Oiz-UTgYqg2ke1En5zakmhSP7uvwIKuydq4c41iWbGVC9kpux5stZ4PpYJhxRrT8m7z_F4JYo1nJ6dk6i0Gmf0fBBcx7ae3g0xMEq0hvhhMs--Dmiy6GiZk8DtAAM5Esvpb2x_tYfXLpWOUSpsb0j4R4KZiFH1LGu4UA8Jz3cbWcSwKvC5cAiHFfG-TCUJb-1ZPDJon63Yw"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<!-- Photo 4: Lounge & Creative Nook -->
+<div class="relative group overflow-hidden bg-surface-container-highest cursor-pointer hidden md:block">
+<img alt="Executive Green Room Lounge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intimate lounge corner inside a SoHo loft featuring low-profile boucle armchairs, contemporary sculptural coffee table, mid-century ceramic lamps, exposed whitewashed brick, and framed abstract monochrome art prints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6P84TKU9xd0ETzuBizk6wCDJT_zF4uvo4ygkEPuuOq-rYw8DmDTj2IRXFW5h_IeZxgpqY5gFPv4Q9-72ih4TSt6BvYeUo8rpKEjt9Vriu9gqvdCyMUSuxA07EWlMb2UKwZStyNw7oUvLLX9ppryLR0UfIEnfhpl_ISvoFGO9zLzxqgoD7i_imIZTt0XguD8b8hcaCqCxGeja1J2SRDCaVRU0cJ-yV-IZ4jWzAiqE7qMa-OjGa6ryqFQ"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<!-- Photo 5: Restroom / Dressing Suite -->
+<div class="relative group overflow-hidden bg-surface-container-highest cursor-pointer hidden md:block">
+<img alt="VIP Dressing Room and Vanity" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury backstage production vanity area with illuminated Hollywood makeup mirror stations, terrazzo stone sinks, and high-end brass architectural accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUhYqY7rMd90tQuQni3x2vJT75aHDtkbEMIBLeL2cpxbl0PZRBQxcJaKLQ0_sR_qc289t1Y0GuGAWank5VqyTM_Lztv03fx4_vHKSf-l_cqf2pJrCrHMGoLecN7A7C43_UhfcE-yOQ96wVbaBsxHxhaUT6Qc3tb8FbrEgY3JajrsVAncPJAUCsADKKmB_QZf0JepIaATobPdcnsvFoEVLOHFMvp6ovDuqPWq0Cw9cvewD7lvIXoXSL7g"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<!-- View All Photos Floating Trigger -->
+<button class="absolute bottom-4 right-4 flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md text-primary font-label-lg text-label-lg font-semibold shadow-lg hover:bg-surface-container-lowest hover:scale-105 active:scale-95 transition-all border border-outline-variant/50" type="button">
+<span class="material-symbols-outlined text-lg text-primary">grid_view</span>
+<span>View all 28 photos</span>
+</button>
+</div>
+</div>
+<!-- Primary Detail Layout (2/3 Left & 1/3 Right Sticky) -->
+<div class="max-w-[1360px] w-full mx-auto px-margin py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left Column (8 cols): Specifications, Narrative, Amenities, Reviews -->
+<div class="lg:col-span-8 flex flex-col gap-10">
+<!-- Host Quick Overview & Accolades -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/40 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative flex-shrink-0">
+<img alt="Host Elena Vance" class="w-16 h-16 rounded-full object-cover shadow-md ring-2 ring-primary-fixed" data-alt="Close-up environmental headshot of an elegant female creative director and venue curator with natural lighting, smiling confident demeanor, wearing tailored dark linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFkWOS5WXP7b3X6CQBF3TlLn5T4pQp80_qdu-A7WXtSLeJtMB108i9YlRvUWqpatxeAHOoTY0zazGPIJa0mSXJZW0avuaj0qdftUJlgLqZjAMoC8w8fBJpmUU7rrpvTpmuAyvHxSGQVPLhpSPRGfWmp7YfkapPHXrqWuBxn2wm3QUJKkATXkIJf2s0Q-LiNJ4omtZEN0jknKGM9Td0g3CsnVxvbuf2QcD2nWD9LPKl6XYk90y1LbzXsw"/>
+<span class="absolute -bottom-1 -right-1 flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary shadow">
+<span class="material-symbols-outlined text-xs">grade</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Hosted by Elena Vance</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Curator at Studio SoHo • Joined 4 years ago</p>
+<div class="flex items-center gap-3 mt-1 font-label-md text-label-md text-on-surface">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                  Responds in &lt; 15 mins
+                </span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant">100% Response Rate</span>
+</div>
+</div>
+</div>
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-primary hover:bg-surface-container-high font-label-lg text-label-lg font-semibold transition-colors flex items-center justify-center gap-2 shadow-sm border border-outline-variant/60 flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-base text-secondary">chat_bubble_outline</span>
+            Message Elena
+          </button>
+</div>
+<!-- Metric Badges Bento Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-2xl">crop_free</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3,200</span>
+<span class="text-xs text-on-surface-variant">Total Sq Feet</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-2xl">groups</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">120 Max</span>
+<span class="text-xs text-on-surface-variant">120 Stand / 70 Seat</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-2xl">height</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">14 ft</span>
+<span class="text-xs text-on-surface-variant">Ceiling Height</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-1">
+<span class="material-symbols-outlined text-secondary text-2xl">wc</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">3 Units</span>
+<span class="text-xs text-on-surface-variant">Private Restrooms</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-1 col-span-2 sm:col-span-1">
+<span class="material-symbols-outlined text-secondary text-2xl">elevator</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Direct</span>
+<span class="text-xs text-on-surface-variant">Freight Elevator</span>
+</div>
+</div>
+<!-- Space Narrative & Ideal Uses -->
+<div class="flex flex-col gap-space-md">
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">About the Space</h2>
+<div class="space-y-4 font-body-lg text-body-lg text-on-surface leading-relaxed">
+<p>
+              Perched atop a historic cast-iron building in Downtown SoHo, <strong class="text-primary font-semibold">The Glasshouse Loft &amp; Skylight Gallery</strong> delivers unprecedented daylight illumination, bespoke architectural volumes, and museum-grade finishes. Designed specifically for commercial film &amp; photo productions, editorial runways, luxury brand launches, and executive hospitality retreats.
+            </p>
+<p>
+              The loft encompasses 3,200 square feet of column-free entertaining and production terrain. Original timber ceilings meet a 24-foot motorized north-facing skylight array, allowing total diffusion control for cinematographers and staging directors. Equipped with three-phase 200A camlock electric feeds, a dedicated 8,000 lb drive-in freight elevator opening directly into the staging floor, and a commercial-ready styling bar.
+            </p>
+</div>
+<!-- Ideal Event Categories -->
+<div class="mt-4 flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg font-bold text-primary uppercase tracking-wide">Perfect For</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3.5 py-1.5 rounded-lg bg-surface-container border border-outline-variant/50 font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">photo_camera</span>
+                Editorial Photo Shoots
+              </span>
+<span class="px-3.5 py-1.5 rounded-lg bg-surface-container border border-outline-variant/50 font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">campaign</span>
+                Brand &amp; Product Activations
+              </span>
+<span class="px-3.5 py-1.5 rounded-lg bg-surface-container border border-outline-variant/50 font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">wine_bar</span>
+                Intimate Weddings &amp; Galas
+              </span>
+<span class="px-3.5 py-1.5 rounded-lg bg-surface-container border border-outline-variant/50 font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">restaurant</span>
+                Culinary Pop-up Dinners
+              </span>
+<span class="px-3.5 py-1.5 rounded-lg bg-surface-container border border-outline-variant/50 font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">business_center</span>
+                Executive Offsites &amp; Summits
+              </span>
+</div>
+</div>
+</div>
+<!-- Amenities Interactive Grid -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Space Amenities &amp; Production Gear</h2>
+<span class="font-label-md text-label-md text-secondary hover:text-primary font-semibold cursor-pointer underline decoration-secondary">Download Gear Sheet (PDF)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">camera</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Profoto Strobe Pack</span>
+<span class="text-xs text-on-surface-variant">3x D2 1000Ws, C-stands, softboxes</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">palette</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Corner Cyclorama</span>
+<span class="text-xs text-on-surface-variant">20ft x 16ft x 14ft painted fresh white</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">wifi</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Gigabit Fiber WiFi</span>
+<span class="text-xs text-on-surface-variant">940 Mbps Symmetrical, backup line</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">soup_kitchen</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Commercial Prep Kitchen</span>
+<span class="text-xs text-on-surface-variant">SubZero refrigeration, warming trays</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">speaker</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Sonance Architectural Audio</span>
+<span class="text-xs text-on-surface-variant">8-zone in-ceiling system + AirPlay 2</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">local_shipping</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Dedicated Loading Bay</span>
+<span class="text-xs text-on-surface-variant">Street-level curb cut &amp; direct freight</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">thermostat</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Multi-Zone Climate</span>
+<span class="text-xs text-on-surface-variant">Silent ultra-quiet HVAC for live sound</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">blinds</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Motorized Blackout Shades</span>
+<span class="text-xs text-on-surface-variant">100% blackout in 45 seconds</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl text-primary">dry_cleaning</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Wardrobe &amp; Hair Stations</span>
+<span class="text-xs text-on-surface-variant">4 rolling racks, Jiffy steamers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floor Plan & Space Layout Viewer -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Architectural Layout &amp; Floor Plan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Total envelope 3,200 sq ft • Clear span height 14ft 2in</p>
+</div>
+<!-- Interactive Switcher -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container self-start">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm transition-all" id="tabCocktail">Cocktail / Gallery</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md font-semibold transition-all" id="tabProduction">Production Studio</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md font-semibold transition-all" id="tabSeated">Seated Banquet</button>
+</div>
+</div>
+<!-- Floor Plan Blueprint Graphic in Deep Luxury Maroon -->
+<div class="relative w-full h-72 rounded-xl bg-primary text-on-primary overflow-hidden p-6 flex flex-col justify-between border border-primary-container shadow-inner">
+<div class="flex justify-between items-start z-10">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed font-bold" id="planModeName">Standard Layout: Open Exhibition &amp; Reception</span>
+</div>
+<span class="font-label-md text-label-md bg-primary-container/80 backdrop-blur px-3 py-1 rounded-full text-on-primary border border-outline-variant/30">Scale: 1/4" = 1'-0"</span>
+</div>
+<!-- Stylized Schematic Blueprint Wireframe with Maroon & Soft Pink Highlights -->
+<div class="absolute inset-4 opacity-35 pointer-events-none flex items-center justify-center">
+<svg class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 700 300">
+<!-- Perimeter Wall -->
+<rect height="260" rx="4" stroke="#ffdada" stroke-width="2.5" width="660" x="20" y="20"></rect>
+<!-- Cyclorama Bay -->
+<path d="M20 20 L240 20 L240 160 L20 160" stroke="#ff898f" stroke-dasharray="4 4" stroke-width="2"></path>
+<text fill="#ff898f" font-size="14" font-weight="bold" x="50" y="90">CYCLORAMA STAGE (20'x16')</text>
+<!-- Skylight Envelope -->
+<rect height="120" stroke="#ffdada" stroke-width="2" width="220" x="280" y="50"></rect>
+<line stroke="#ffdada" stroke-dasharray="3 3" x1="280" x2="500" y1="50" y2="170"></line>
+<line stroke="#ffdada" stroke-dasharray="3 3" x1="280" x2="500" y1="170" y2="50"></line>
+<text fill="#ffdada" font-size="14" font-weight="bold" x="320" y="115">SKYLIGHT ZONE</text>
+<!-- Prep Kitchen & Restrooms -->
+<rect height="140" stroke="#ffb3b4" width="150" x="530" y="20"></rect>
+<text fill="#ffb3b4" font-size="12" x="545" y="80">PREP KITCHEN</text>
+<text fill="#ffb3b4" font-size="12" x="545" y="120">3x RESTROOMS</text>
+<!-- Freight Elevator Bay -->
+<rect height="80" stroke="#ff898f" width="90" x="20" y="200"></rect>
+<text fill="#ff898f" font-size="11" x="30" y="245">FREIGHT 8k LB</text>
+<!-- Lounge Seating Flow -->
+<circle cx="390" cy="230" r="35" stroke="#ffdada" stroke-dasharray="4 4"></circle>
+<text fill="#ffdada" font-size="11" x="350" y="235">CENTRAL LOUNGE</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-xs text-primary-fixed z-10 pt-4">
+<span>Main Gallery: 58' x 44'</span>
+<span>Skylight Aperture: 24' x 12'</span>
+<span>North-South Natural Lighting Axis</span>
+</div>
+</div>
+</div>
+<!-- House Rules & Policies -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-space-md">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">House Guidelines &amp; Policies</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                Cancellation Policy: Flexible 48h
+              </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Full refund up to 48 hours before your booking start time. 50% refund thereafter up to 24 hours prior. SpaceConnect Guarantee protects all payments.
+              </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">volume_down</span>
+                Sound &amp; Noise Ordinance
+              </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Commercial sound amplification permitted until 11:00 PM on weeknights and 12:30 AM on Friday/Saturday. Acoustic treatments guarantee low street bleed.
+              </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">inventory_2</span>
+                Load-In &amp; Freight Protocol
+              </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Direct street curb staging requires building freight operator reservation included with your booking. Certificate of Insurance (COI) required 72h prior.
+              </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">smoke_free</span>
+                Smoke &amp; Haze Machines
+              </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Water-based atmospheric haze machines are approved with notice to disable optical sensors. No smoking or open naked flame permitted.
+              </p>
+</div>
+</div>
+</div>
+<!-- Verified Reviews & Breakdown -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">Verified Host Reviews</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">128 verified bookings hosted in the last 12 months</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">4.98</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 5.0 Overall</span>
+</div>
+</div>
+<!-- Rating Breakdown Progress Rings / Bars -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Cleanliness</span>
+<span class="text-xs text-on-surface-variant">Spotless delivery</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">5.0</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Communication</span>
+<span class="text-xs text-on-surface-variant">Rapid check-in concierge</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">5.0</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Location &amp; Access</span>
+<span class="text-xs text-on-surface-variant">Prime SoHo district</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">4.9</span>
+</div>
+</div>
+<!-- Review Testimonials Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Review 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Reviewer Marcus Cole" class="w-11 h-11 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="Portrait of an editorial photographer with short dark hair and cameras slung over his shoulders in natural studio light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk-lYGm1jYh2F6Myzhwtmgpcv577rbagRwCPDreM7g-mkSTh7WyOSdVbyrqD3DL96NZ8a3KG1gh42NYIw6nTLhNMY6s_r-e42Pofy8r2baUevmKKSdRHwlNYge88Y2JY1AyVQvBSN0c8KMnxdj50CjWL0HlvpBnUJD8wNB4bE2FCT-GkdW774bFkpk64cQv_c1HbDxfhiV3Yx9VfHug8_qr6vXx9lmhXA6mWKXSUDc_Y4TdrOY3lZIsg"/>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Marcus Cole</span>
+<span class="text-xs text-on-surface-variant">Editorial Director • Shot Fall Campaign • Oct 2024</span>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                "One of the rarest natural light lofts in Manhattan. The motorized skylight diffusion was seamless, and Elena had the Profoto heads tested and ready upon load-in. The freight lift made handling 18 gear cases effortless."
+              </p>
+</div>
+<!-- Review 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img alt="Reviewer Sarah Lin" class="w-11 h-11 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="Portrait of a female brand experiential director wearing a chic blazer in a modern creative venue setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0LQZc5nN3SNQXz-yzzFxfYGYCKUzro7Y5fNLDkx_bliFRb3_lJQIzVPZT7Fp_Hin4ZhumoVlJoaMeHcflyFpbXGXoTZATCnjlTLAYR_DOiq_qjTWRQG_jt10aurNXxO5OVcdIM8yesYYkOQwbZvoebNzOrlUmA1fiRJNKWXZCIfsCYDNfLKpWIwZUu9HZEBO0vfPLnfDBTcID2yeKTudfltBiA0G7C4fxkwMe7loxHq8qe1OCL0ldXA"/>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-primary block">Sarah Lin</span>
+<span class="text-xs text-on-surface-variant">Head of PR, Kroma Beauty • 85 Guests • Nov 2024</span>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                "We hosted our international beauty launch here with top tier media. The prep kitchen was immaculate for our private chefs, and the Sonance audio covered the space with pristine fidelity without reverb."
+              </p>
+</div>
+</div>
+<button class="self-start px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg font-bold transition-colors border border-outline-variant/40" type="button">
+            Show all 128 verified reviews
+          </button>
+</div>
+</div>
+<!-- Right Column (4 cols): Sticky Hourly Booking Widget Card -->
+<div class="lg:col-span-4 sticky top-28">
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-xl border border-outline-variant/40 flex flex-col gap-space-md">
+<!-- Pricing Rate Header -->
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-headline-xl font-bold text-primary" id="hourlyRateDisplay">$195</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ hour</span>
+</div>
+<span class="font-caption text-caption uppercase font-bold tracking-wider px-2 py-1 rounded bg-surface-container text-on-surface-variant">4 hr minimum</span>
+</div>
+<div class="h-px w-full bg-surface-container-high"></div>
+<!-- Booking Interactive Form Elements -->
+<div class="flex flex-col gap-3">
+<!-- Event Type Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold" for="eventType">Event Type</label>
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md font-semibold appearance-none focus:outline-none focus:bg-surface-container border border-outline-variant/40 transition-colors" id="eventType">
+<option value="brand">Brand Launch &amp; Cocktail Party</option>
+<option value="photo">Photo / Video Production</option>
+<option value="dinner">Private Dinner &amp; Culinary Tasting</option>
+<option value="offsite">Executive Corporate Retreat</option>
+<option value="wedding">Intimate Wedding Ceremony</option>
+</select>
+<span class="material-symbols-outlined text-sm absolute right-3 top-3 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date Picker -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold" for="eventDate">Event Date</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3 pl-10 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md font-semibold focus:outline-none focus:bg-surface-container border border-outline-variant/40 transition-colors" id="eventDate" type="date" value="2025-05-18"/>
+<span class="material-symbols-outlined text-lg absolute left-3 text-secondary pointer-events-none">calendar_today</span>
+</div>
+</div>
+<!-- Time Slot Dual Selectors -->
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold" for="startTime">Start Time</label>
+<select class="w-full h-11 px-2.5 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md font-semibold focus:outline-none focus:bg-surface-container border border-outline-variant/40" id="startTime">
+<option value="12">12:00 PM</option>
+<option value="13">1:00 PM</option>
+<option selected="" value="14">2:00 PM</option>
+<option value="15">3:00 PM</option>
+<option value="16">4:00 PM</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold" for="endTime">End Time</label>
+<select class="w-full h-11 px-2.5 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md font-semibold focus:outline-none focus:bg-surface-container border border-outline-variant/40" id="endTime">
+<option value="18">6:00 PM (4 hrs)</option>
+<option value="19">7:00 PM (5 hrs)</option>
+<option selected="" value="20">8:00 PM (6 hrs)</option>
+<option value="21">9:00 PM (7 hrs)</option>
+<option value="22">10:00 PM (8 hrs)</option>
+</select>
+</div>
+</div>
+<!-- Guest Stepper -->
+<div class="flex flex-col gap-1">
+<label class="font-caption text-caption uppercase tracking-wider text-on-surface-variant font-bold">Attendees</label>
+<div class="flex items-center justify-between h-11 px-3 rounded-xl bg-surface-container-low border border-outline-variant/40">
+<span class="font-label-md text-label-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">person</span>
+<span id="guestDisplay">45 guests</span>
+</span>
+<div class="flex items-center gap-2">
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest text-primary font-bold flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-xs border border-outline-variant/40" id="decGuests" type="button">-</button>
+<span class="font-label-md text-label-md font-bold text-primary w-6 text-center" id="guestCountVal">45</span>
+<button class="w-7 h-7 rounded-lg bg-surface-container-lowest text-primary font-bold flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-xs border border-outline-variant/40" id="incGuests" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Price Calculation Math Breakdown -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-2.5 border border-outline-variant/30">
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface">
+<span id="calcHourlyLabel">$195 × 6 hours</span>
+<span class="font-semibold text-primary" id="calcHourlyAmount">$1,170</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface">
+<span>Standard deep cleaning fee</span>
+<span class="font-semibold text-primary">$150</span>
+</div>
+<div class="flex items-center justify-between font-body-md text-body-md text-on-surface">
+<span class="flex items-center gap-1">
+                SpaceConnect service fee
+                <span class="material-symbols-outlined text-xs text-on-surface-variant" title="Includes insurance certificate validation and 24/7 on-call coordinator support.">info</span>
+</span>
+<span class="font-semibold text-primary">$95</span>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-0.5"></div>
+<div class="flex items-center justify-between font-headline-sm text-headline-sm font-bold text-primary">
+<span>Total Estimated</span>
+<span id="calcTotal">$1,415</span>
+</div>
+</div>
+<!-- High-Contrast Rich Maroon CTA Button -->
+<div class="flex flex-col gap-2.5">
+<button class="w-full h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(91,2,20,0.35)] transition-all transform active:scale-95" type="button">
+<span>Request to Book / Instant Reserve</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<p class="text-xs text-center text-on-surface-variant">
+              You won't be charged yet. Host has 24h to accept.
+            </p>
+</div>
+<!-- Trust Badges & Guarantee -->
+<div class="pt-2 border-t border-surface-container-high flex flex-col gap-2">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">lock</span>
+<span>100% Encrypted &amp; Secure Checkout</span>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">verified_user</span>
+<span>$1,000,000 Host &amp; Guest Liability Shield</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    // Guest stepper
+    let guests = 45;
+    const guestDisplay = document.getElementById('guestDisplay');
+    const guestCountVal = document.getElementById('guestCountVal');
+    document.getElementById('incGuests')?.addEventListener('click', () => {
+      if (guests < 120) {
+        guests += 5;
+        guestDisplay.textContent = `${guests} guests`;
+        guestCountVal.textContent = guests;
+      }
+    });
+    document.getElementById('decGuests')?.addEventListener('click', () => {
+      if (guests > 5) {
+        guests -= 5;
+        guestDisplay.textContent = `${guests} guests`;
+        guestCountVal.textContent = guests;
+      }
+    });
+
+    // Time calculations
+    const startSelect = document.getElementById('startTime');
+    const endSelect = document.getElementById('endTime');
+    const calcHourlyLabel = document.getElementById('calcHourlyLabel');
+    const calcHourlyAmount = document.getElementById('calcHourlyAmount');
+    const calcTotal = document.getElementById('calcTotal');
+    const rate = 195;
+    const cleaningFee = 150;
+    const serviceFee = 95;
+
+    function recalculate() {
+      const s = parseInt(startSelect.value, 10);
+      const e = parseInt(endSelect.value, 10);
+      let hours = e - s;
+      if (hours < 4) hours = 4; // minimum
+
+      const subtotal = rate * hours;
+      const grandTotal = subtotal + cleaningFee + serviceFee;
+
+      calcHourlyLabel.textContent = `$${rate} × ${hours} hours`;
+      calcHourlyAmount.textContent = `$${subtotal.toLocaleString()}`;
+      calcTotal.textContent = `$${grandTotal.toLocaleString()}`;
+    }
+
+    startSelect?.addEventListener('change', recalculate);
+    endSelect?.addEventListener('change', recalculate);
+
+    // Save toggle
+    const saveBtn = document.getElementById('saveBtn');
+    const saveIcon = document.getElementById('saveIcon');
+    const saveLabel = document.getElementById('saveLabel');
+    let isSaved = false;
+    saveBtn?.addEventListener('click', () => {
+      isSaved = !isSaved;
+      if (isSaved) {
+        saveIcon.textContent = 'favorite';
+        saveIcon.classList.add('text-secondary');
+        saveLabel.textContent = 'Saved';
+      } else {
+        saveIcon.textContent = 'favorite_border';
+        saveLabel.textContent = 'Save';
+      }
+    });
+
+    // Floor plan layout switcher
+    const planModeName = document.getElementById('planModeName');
+    const tabCocktail = document.getElementById('tabCocktail');
+    const tabProduction = document.getElementById('tabProduction');
+    const tabSeated = document.getElementById('tabSeated');
+    const tabs = [tabCocktail, tabProduction, tabSeated];
+
+    function activateTab(activeTab, text) {
+      tabs.forEach(t => {
+        if (t === activeTab) {
+          t.className = 'px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm transition-all';
+        } else {
+          t.className = 'px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-primary font-label-md text-label-md font-semibold transition-all';
+        }
+      });
+      if (planModeName) planModeName.textContent = text;
+    }
+
+    tabCocktail?.addEventListener('click', () => activateTab(tabCocktail, 'Standard Layout: Open Exhibition & Reception (120 Max)'));
+    tabProduction?.addEventListener('click', () => activateTab(tabProduction, 'Studio Layout: Strobe Grip Array & Motorized Blackout'));
+    tabSeated?.addEventListener('click', () => activateTab(tabSeated, 'Banquet Layout: Dual 34-Seat Communal Tables (70 Seated)'));
+  </script>
+</div></main><footer class="w-full bg-surface-container-low border-t border-surface-container-high py-12"><div class="max-w-[1360px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-10"><div class="lg:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-7 h-7 rounded bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-base">domain</span></div><span class="font-headline-sm text-headline-sm font-bold text-primary">SpaceConnect</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Discover and book inspiring spaces for productions, celebrations, corporate offsites, and pop-up creative experiences.</p><div class="flex items-center gap-space-xs mt-2"><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">public</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">mail</span></span><span class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-container-highest cursor-pointer transition-colors"><span class="material-symbols-outlined text-sm">share</span></span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-primary">Explore</span><ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">Creative Studios</li><li class="hover:text-primary cursor-pointer transition-colors">Event Venues</li><li class="hover:text-primary cursor-pointer transition-colors">Production Spaces</li><li class="hover:text-primary cursor-pointer transition-colors">Meeting Rooms</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-primary">Company</span><ul class="flex flex-col gap-2 font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary cursor-pointer transition-colors">About Us</li><li class="hover:text-primary cursor-pointer transition-colors">Trust &amp; Safety</li><li class="hover:text-primary cursor-pointer transition-colors">Community Guidelines</li><li class="hover:text-primary cursor-pointer transition-colors">Support Center</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-bold text-primary">Stay Connected</span><p class="text-xs text-on-surface-variant">Get curated weekly venue drops and special booking privileges.</p><form class="flex flex-col gap-2" onsubmit="return false;"><input class="h-10 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface text-body-md placeholder:text-outline focus:border-secondary focus:outline-none" placeholder="Enter your email" type="email"/><button class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors" type="submit">Subscribe</button></form></div></div><div class="pt-6 border-t border-surface-container-high flex flex-col md:flex-row items-center justify-between gap-space-md text-xs text-on-surface-variant"><div>© 2025 SpaceConnect Inc. All rights reserved. Crafted for premier physical spaces.</div><div class="flex items-center gap-space-lg"><span class="hover:text-primary cursor-pointer transition-colors">Privacy Policy</span><span class="hover:text-primary cursor-pointer transition-colors">Terms of Service</span><span class="hover:text-primary cursor-pointer transition-colors">Cookie Settings</span></div></div></div></footer></body></html>
